@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:tns="http://WEBooksGeocoder.org/" elementFormDefault="qualified" targetNamespace="http://WEBooksGeocoder.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CoordGeo" nillable="true" type="tns:CoordGeo" />
+  <xs:complexType name="CoordGeo">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Latitude" type="xs:float" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Longitude" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

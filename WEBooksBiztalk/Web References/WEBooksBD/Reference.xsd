@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:tns="http://www.WEBooksBD.pt/" elementFormDefault="qualified" targetNamespace="http://www.WEBooksBD.pt/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ArrayOfLivro" nillable="true" type="tns:ArrayOfLivro" />
+  <xs:complexType name="ArrayOfLivro">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Livro" nillable="true" type="tns:Livro" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Livro">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="IdLivro" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ISBN" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Titulo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Categoria" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Autores" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Editora" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="AnoEdicao" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PrecoVenda" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PrecoSemDesconto" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="UrlImagem" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TempoEntrega" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Desconto" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NomeFornecedor" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="NumPesquisas" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Quantidade" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEncomenda" nillable="true" type="tns:ArrayOfEncomenda" />
+  <xs:complexType name="ArrayOfEncomenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Encomenda" nillable="true" type="tns:Encomenda" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Encomenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="IdEncomenda" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="IdCliente" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ValorTotal" type="xs:double" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DataCriacao" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Estado" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ListaLivros" type="tns:ArrayOfLivro" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Cliente" type="tns:Cliente" />
+      <xs:element minOccurs="0" maxOccurs="1" name="HistoricoEstado" type="tns:ArrayOfEstadoEncomenda" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Cliente">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Utilizador">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="IdCliente" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Telefone" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Numero" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Address" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="City" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="State" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ZIPcode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Country" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Latitude" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Longitude" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="NumCartaoCredito" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DataValidadeCartaoValidade" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Estado" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Utilizador">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="IdUtilizador" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Nome" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Username" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Password" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TipoUtilizador" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfEstadoEncomenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EstadoEncomenda" nillable="true" type="tns:EstadoEncomenda" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EstadoEncomenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="IdEncomenda" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DataAlteracao" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NomeEstado" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Contador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCliente" nillable="true" type="tns:ArrayOfCliente" />
+  <xs:complexType name="ArrayOfCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cliente" nillable="true" type="tns:Cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLivroPromocao" nillable="true" type="tns:ArrayOfLivroPromocao" />
+  <xs:complexType name="ArrayOfLivroPromocao">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LivroPromocao" nillable="true" type="tns:LivroPromocao" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LivroPromocao">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="TipoCapa" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Titulo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NomeAutor" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Livro" nillable="true" type="tns:Livro" />
+  <xs:element name="LivroPromocao" nillable="true" type="tns:LivroPromocao" />
+  <xs:element name="DadosGestao" nillable="true" type="tns:DadosGestao" />
+  <xs:complexType name="DadosGestao">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="NumComprados" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="NumPesquisados" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="NumComDesconto" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="NumSemDesconto" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EstadoEncomenda" nillable="true" type="tns:EstadoEncomenda" />
+  <xs:element name="Utilizador" nillable="true" type="tns:Utilizador" />
+  <xs:element name="Cliente" nillable="true" type="tns:Cliente" />
+  <xs:element name="Encomenda" nillable="true" type="tns:Encomenda" />
+</xs:schema>

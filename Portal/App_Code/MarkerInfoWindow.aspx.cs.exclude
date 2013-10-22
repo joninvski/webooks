@@ -1,0 +1,61 @@
+using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Web;
+using System.Web.SessionState;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
+
+using WCPierce.Web.UI.WebControls;
+
+namespace TestWeb
+{
+	/// <summary>
+	/// Summary description for Basics.
+	/// </summary>
+	public partial class MarkerInfoWindow : System.Web.UI.Page
+	{
+
+		protected void Page_Load(object sender, System.EventArgs e)
+		{
+          GPoint gp = new GPoint(-9.17905712863F, 38.7505808002F);
+
+          GMarker gm = new GMarker(gp, "Residencia");
+          gMap.Overlays.Add(gm);
+/*
+          gm = new GMarker(new GPoint(gp.X + 0.005F, gp.Y + 0.005F), "SecondMarker");
+          gMap.Overlays.Add(gm);
+
+          gm = new GMarker(new GPoint(-122.149944F, 37.441944F), "Caseiros");
+          gMap.Overlays.Add(gm);
+*/
+          gMap.AddControl(new GSmallMapControl());
+          gMap.AddControl(new GMapTypeControl());
+
+          gMap.CenterAndZoom(gp, 4);
+          
+		}
+
+		#region Web Form Designer generated code
+		override protected void OnInit(EventArgs e)
+		{
+			//
+			// CODEGEN: This call is required by the ASP.NET Web Form Designer.
+			//
+			InitializeComponent();
+			base.OnInit(e);
+		}
+		
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{    
+		}
+		#endregion
+	}
+}

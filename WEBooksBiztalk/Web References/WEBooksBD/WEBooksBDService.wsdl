@@ -1,0 +1,1452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.WEBooksBD.pt/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.WEBooksBD.pt/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.WEBooksBD.pt/">
+      <s:element name="InsereCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ZIPcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="longitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="latitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numCartaoCredito" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataValidadeCartaoValidade" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereClienteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="HistoricoComprasLivros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HistoricoComprasLivrosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HistoricoComprasLivrosResult" type="tns:ArrayOfLivro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLivro">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Livro" nillable="true" type="tns:Livro" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Livro">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdLivro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ISBN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Titulo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Categoria" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Autores" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Editora" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AnoEdicao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrecoVenda" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrecoSemDesconto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UrlImagem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TempoEntrega" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Desconto" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="NomeFornecedor" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumPesquisas" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantidade" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="HistoricoComprasEncomenda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HistoricoComprasEncomendaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HistoricoComprasEncomendaResult" type="tns:ArrayOfEncomenda" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEncomenda">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Encomenda" nillable="true" type="tns:Encomenda" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Encomenda">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdEncomenda" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdCliente" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorTotal" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataCriacao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListaLivros" type="tns:ArrayOfLivro" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cliente" type="tns:Cliente" />
+          <s:element minOccurs="0" maxOccurs="1" name="HistoricoEstado" type="tns:ArrayOfEstadoEncomenda" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Cliente">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Utilizador">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="IdCliente" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Telefone" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Numero" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ZIPcode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Latitude" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Longitude" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NumCartaoCredito" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DataValidadeCartaoValidade" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Utilizador">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdUtilizador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoUtilizador" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEstadoEncomenda">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EstadoEncomenda" nillable="true" type="tns:EstadoEncomenda" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EstadoEncomenda">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdEncomenda" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataAlteracao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NomeEstado" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Contador" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MostraEncomendasCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostraEncomendasClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostraEncomendasClienteResult" type="tns:ArrayOfEncomenda" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApagaCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ApagaClienteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostraClientes">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostraClientesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostraClientesResult" type="tns:ArrayOfCliente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCliente">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Cliente" nillable="true" type="tns:Cliente" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MostraDadosCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostraDadosClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostraDadosClienteResult" type="tns:Cliente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereGestor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereGestorResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="InsereLivroCarrinhoCompras">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ISBN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantidade" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereLivroCarrinhoComprasResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListaCarrinhoCompras">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaCarrinhoComprasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaCarrinhoComprasResult" type="tns:ArrayOfLivro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveLivroDoCarrinhoCompras">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ISBN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nomeFornecedor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveLivroDoCarrinhoComprasResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="LimpaCarrinhoCompras">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LimpaCarrinhoComprasResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="InsereListaPesquisaHistorico">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listaLivros" type="tns:ArrayOfLivro" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereListaPesquisaHistoricoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListaPesquisaHistorico">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaPesquisaHistoricoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaPesquisaHistoricoResult" type="tns:ArrayOfLivro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereListaLivros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listaLivros" type="tns:ArrayOfLivro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereListaLivrosResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostraEncomendasLivro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ISBN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostraEncomendasLivroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostraEncomendasLivroResult" type="tns:ArrayOfEncomenda" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostraLivrosMaisComprados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="numeroLivros" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostraLivrosMaisCompradosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostraLivrosMaisCompradosResult" type="tns:ArrayOfLivro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostraLivrosMaisPesquisados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="numeroLivros" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostraLivrosMaisPesquisadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostraLivrosMaisPesquisadosResult" type="tns:ArrayOfLivro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostraNumeroLivrosPesquisados">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostraNumeroLivrosPesquisadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MostraNumeroLivrosPesquisadosResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostraNumeroLivrosComprados">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostraNumeroLivrosCompradosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MostraNumeroLivrosCompradosResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostraNumeroLivrosCompradosComDesconto">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostraNumeroLivrosCompradosComDescontoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MostraNumeroLivrosCompradosComDescontoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostraNumeroLivrosCompradosSemDesconto">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostraNumeroLivrosCompradosSemDescontoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MostraNumeroLivrosCompradosSemDescontoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostraDadosGestao">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostraDadosGestaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostraDadosGestaoResult" type="tns:DadosGestao" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DadosGestao">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="NumComprados" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumPesquisados" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumComDesconto" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumSemDesconto" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CheckOut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckOutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckOutResult" type="tns:Encomenda" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginUtilizador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginUtilizadorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginUtilizadorResult" type="tns:Utilizador" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelaEncomenda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idEncomenda" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelaEncomendaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AlteraEstadoEncomenda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idEncomenda" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="novoEstado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlteraEstadoEncomendaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostraEncomendasPendentes">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostraEncomendasPendentesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostraEncomendasPendentesResult" type="tns:ArrayOfEncomenda" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostraEncomendasCanceladas">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostraEncomendasCanceladasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostraEncomendasCanceladasResult" type="tns:ArrayOfEncomenda" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostraEncomendasColocadas">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostraEncomendasColocadasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostraEncomendasColocadasResult" type="tns:ArrayOfEncomenda" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostraEncomendasEntregues">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostraEncomendasEntreguesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostraEncomendasEntreguesResult" type="tns:ArrayOfEncomenda" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostraListaEncomendas">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostraListaEncomendasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostraListaEncomendasResult" type="tns:ArrayOfEncomenda" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereListaTopSellers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listaLivrosPromocao" type="tns:ArrayOfLivroPromocao" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLivroPromocao">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LivroPromocao" nillable="true" type="tns:LivroPromocao" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LivroPromocao">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TipoCapa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Titulo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NomeAutor" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsereListaTopSellersResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InsereClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:InsereCliente" />
+  </wsdl:message>
+  <wsdl:message name="InsereClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:InsereClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="HistoricoComprasLivrosSoapIn">
+    <wsdl:part name="parameters" element="tns:HistoricoComprasLivros" />
+  </wsdl:message>
+  <wsdl:message name="HistoricoComprasLivrosSoapOut">
+    <wsdl:part name="parameters" element="tns:HistoricoComprasLivrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="HistoricoComprasEncomendaSoapIn">
+    <wsdl:part name="parameters" element="tns:HistoricoComprasEncomenda" />
+  </wsdl:message>
+  <wsdl:message name="HistoricoComprasEncomendaSoapOut">
+    <wsdl:part name="parameters" element="tns:HistoricoComprasEncomendaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostraEncomendasClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:MostraEncomendasCliente" />
+  </wsdl:message>
+  <wsdl:message name="MostraEncomendasClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:MostraEncomendasClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApagaClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:ApagaCliente" />
+  </wsdl:message>
+  <wsdl:message name="ApagaClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:ApagaClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostraClientesSoapIn">
+    <wsdl:part name="parameters" element="tns:MostraClientes" />
+  </wsdl:message>
+  <wsdl:message name="MostraClientesSoapOut">
+    <wsdl:part name="parameters" element="tns:MostraClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostraDadosClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:MostraDadosCliente" />
+  </wsdl:message>
+  <wsdl:message name="MostraDadosClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:MostraDadosClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsereGestorSoapIn">
+    <wsdl:part name="parameters" element="tns:InsereGestor" />
+  </wsdl:message>
+  <wsdl:message name="InsereGestorSoapOut">
+    <wsdl:part name="parameters" element="tns:InsereGestorResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsereLivroCarrinhoComprasSoapIn">
+    <wsdl:part name="parameters" element="tns:InsereLivroCarrinhoCompras" />
+  </wsdl:message>
+  <wsdl:message name="InsereLivroCarrinhoComprasSoapOut">
+    <wsdl:part name="parameters" element="tns:InsereLivroCarrinhoComprasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaCarrinhoComprasSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaCarrinhoCompras" />
+  </wsdl:message>
+  <wsdl:message name="ListaCarrinhoComprasSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaCarrinhoComprasResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveLivroDoCarrinhoComprasSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveLivroDoCarrinhoCompras" />
+  </wsdl:message>
+  <wsdl:message name="RemoveLivroDoCarrinhoComprasSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveLivroDoCarrinhoComprasResponse" />
+  </wsdl:message>
+  <wsdl:message name="LimpaCarrinhoComprasSoapIn">
+    <wsdl:part name="parameters" element="tns:LimpaCarrinhoCompras" />
+  </wsdl:message>
+  <wsdl:message name="LimpaCarrinhoComprasSoapOut">
+    <wsdl:part name="parameters" element="tns:LimpaCarrinhoComprasResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsereListaPesquisaHistoricoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsereListaPesquisaHistorico" />
+  </wsdl:message>
+  <wsdl:message name="InsereListaPesquisaHistoricoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsereListaPesquisaHistoricoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaPesquisaHistoricoSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaPesquisaHistorico" />
+  </wsdl:message>
+  <wsdl:message name="ListaPesquisaHistoricoSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaPesquisaHistoricoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsereListaLivrosSoapIn">
+    <wsdl:part name="parameters" element="tns:InsereListaLivros" />
+  </wsdl:message>
+  <wsdl:message name="InsereListaLivrosSoapOut">
+    <wsdl:part name="parameters" element="tns:InsereListaLivrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostraEncomendasLivroSoapIn">
+    <wsdl:part name="parameters" element="tns:MostraEncomendasLivro" />
+  </wsdl:message>
+  <wsdl:message name="MostraEncomendasLivroSoapOut">
+    <wsdl:part name="parameters" element="tns:MostraEncomendasLivroResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostraLivrosMaisCompradosSoapIn">
+    <wsdl:part name="parameters" element="tns:MostraLivrosMaisComprados" />
+  </wsdl:message>
+  <wsdl:message name="MostraLivrosMaisCompradosSoapOut">
+    <wsdl:part name="parameters" element="tns:MostraLivrosMaisCompradosResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostraLivrosMaisPesquisadosSoapIn">
+    <wsdl:part name="parameters" element="tns:MostraLivrosMaisPesquisados" />
+  </wsdl:message>
+  <wsdl:message name="MostraLivrosMaisPesquisadosSoapOut">
+    <wsdl:part name="parameters" element="tns:MostraLivrosMaisPesquisadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostraNumeroLivrosPesquisadosSoapIn">
+    <wsdl:part name="parameters" element="tns:MostraNumeroLivrosPesquisados" />
+  </wsdl:message>
+  <wsdl:message name="MostraNumeroLivrosPesquisadosSoapOut">
+    <wsdl:part name="parameters" element="tns:MostraNumeroLivrosPesquisadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostraNumeroLivrosCompradosSoapIn">
+    <wsdl:part name="parameters" element="tns:MostraNumeroLivrosComprados" />
+  </wsdl:message>
+  <wsdl:message name="MostraNumeroLivrosCompradosSoapOut">
+    <wsdl:part name="parameters" element="tns:MostraNumeroLivrosCompradosResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostraNumeroLivrosCompradosComDescontoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostraNumeroLivrosCompradosComDesconto" />
+  </wsdl:message>
+  <wsdl:message name="MostraNumeroLivrosCompradosComDescontoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostraNumeroLivrosCompradosComDescontoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostraNumeroLivrosCompradosSemDescontoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostraNumeroLivrosCompradosSemDesconto" />
+  </wsdl:message>
+  <wsdl:message name="MostraNumeroLivrosCompradosSemDescontoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostraNumeroLivrosCompradosSemDescontoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostraDadosGestaoSoapIn">
+    <wsdl:part name="parameters" element="tns:MostraDadosGestao" />
+  </wsdl:message>
+  <wsdl:message name="MostraDadosGestaoSoapOut">
+    <wsdl:part name="parameters" element="tns:MostraDadosGestaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckOutSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckOut" />
+  </wsdl:message>
+  <wsdl:message name="CheckOutSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginUtilizadorSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginUtilizador" />
+  </wsdl:message>
+  <wsdl:message name="LoginUtilizadorSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginUtilizadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelaEncomendaSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelaEncomenda" />
+  </wsdl:message>
+  <wsdl:message name="CancelaEncomendaSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelaEncomendaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AlteraEstadoEncomendaSoapIn">
+    <wsdl:part name="parameters" element="tns:AlteraEstadoEncomenda" />
+  </wsdl:message>
+  <wsdl:message name="AlteraEstadoEncomendaSoapOut">
+    <wsdl:part name="parameters" element="tns:AlteraEstadoEncomendaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostraEncomendasPendentesSoapIn">
+    <wsdl:part name="parameters" element="tns:MostraEncomendasPendentes" />
+  </wsdl:message>
+  <wsdl:message name="MostraEncomendasPendentesSoapOut">
+    <wsdl:part name="parameters" element="tns:MostraEncomendasPendentesResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostraEncomendasCanceladasSoapIn">
+    <wsdl:part name="parameters" element="tns:MostraEncomendasCanceladas" />
+  </wsdl:message>
+  <wsdl:message name="MostraEncomendasCanceladasSoapOut">
+    <wsdl:part name="parameters" element="tns:MostraEncomendasCanceladasResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostraEncomendasColocadasSoapIn">
+    <wsdl:part name="parameters" element="tns:MostraEncomendasColocadas" />
+  </wsdl:message>
+  <wsdl:message name="MostraEncomendasColocadasSoapOut">
+    <wsdl:part name="parameters" element="tns:MostraEncomendasColocadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostraEncomendasEntreguesSoapIn">
+    <wsdl:part name="parameters" element="tns:MostraEncomendasEntregues" />
+  </wsdl:message>
+  <wsdl:message name="MostraEncomendasEntreguesSoapOut">
+    <wsdl:part name="parameters" element="tns:MostraEncomendasEntreguesResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostraListaEncomendasSoapIn">
+    <wsdl:part name="parameters" element="tns:MostraListaEncomendas" />
+  </wsdl:message>
+  <wsdl:message name="MostraListaEncomendasSoapOut">
+    <wsdl:part name="parameters" element="tns:MostraListaEncomendasResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsereListaTopSellersSoapIn">
+    <wsdl:part name="parameters" element="tns:InsereListaTopSellers" />
+  </wsdl:message>
+  <wsdl:message name="InsereListaTopSellersSoapOut">
+    <wsdl:part name="parameters" element="tns:InsereListaTopSellersResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WEBooksBDServiceSoap">
+    <wsdl:operation name="InsereCliente">
+      <wsdl:input message="tns:InsereClienteSoapIn" />
+      <wsdl:output message="tns:InsereClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HistoricoComprasLivros">
+      <wsdl:input message="tns:HistoricoComprasLivrosSoapIn" />
+      <wsdl:output message="tns:HistoricoComprasLivrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HistoricoComprasEncomenda">
+      <wsdl:input message="tns:HistoricoComprasEncomendaSoapIn" />
+      <wsdl:output message="tns:HistoricoComprasEncomendaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostraEncomendasCliente">
+      <wsdl:input message="tns:MostraEncomendasClienteSoapIn" />
+      <wsdl:output message="tns:MostraEncomendasClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApagaCliente">
+      <wsdl:input message="tns:ApagaClienteSoapIn" />
+      <wsdl:output message="tns:ApagaClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostraClientes">
+      <wsdl:input message="tns:MostraClientesSoapIn" />
+      <wsdl:output message="tns:MostraClientesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostraDadosCliente">
+      <wsdl:input message="tns:MostraDadosClienteSoapIn" />
+      <wsdl:output message="tns:MostraDadosClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsereGestor">
+      <wsdl:input message="tns:InsereGestorSoapIn" />
+      <wsdl:output message="tns:InsereGestorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsereLivroCarrinhoCompras">
+      <wsdl:input message="tns:InsereLivroCarrinhoComprasSoapIn" />
+      <wsdl:output message="tns:InsereLivroCarrinhoComprasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaCarrinhoCompras">
+      <wsdl:input message="tns:ListaCarrinhoComprasSoapIn" />
+      <wsdl:output message="tns:ListaCarrinhoComprasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveLivroDoCarrinhoCompras">
+      <wsdl:input message="tns:RemoveLivroDoCarrinhoComprasSoapIn" />
+      <wsdl:output message="tns:RemoveLivroDoCarrinhoComprasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LimpaCarrinhoCompras">
+      <wsdl:input message="tns:LimpaCarrinhoComprasSoapIn" />
+      <wsdl:output message="tns:LimpaCarrinhoComprasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsereListaPesquisaHistorico">
+      <wsdl:input message="tns:InsereListaPesquisaHistoricoSoapIn" />
+      <wsdl:output message="tns:InsereListaPesquisaHistoricoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaPesquisaHistorico">
+      <wsdl:input message="tns:ListaPesquisaHistoricoSoapIn" />
+      <wsdl:output message="tns:ListaPesquisaHistoricoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsereListaLivros">
+      <wsdl:input message="tns:InsereListaLivrosSoapIn" />
+      <wsdl:output message="tns:InsereListaLivrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostraEncomendasLivro">
+      <wsdl:input message="tns:MostraEncomendasLivroSoapIn" />
+      <wsdl:output message="tns:MostraEncomendasLivroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostraLivrosMaisComprados">
+      <wsdl:input message="tns:MostraLivrosMaisCompradosSoapIn" />
+      <wsdl:output message="tns:MostraLivrosMaisCompradosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostraLivrosMaisPesquisados">
+      <wsdl:input message="tns:MostraLivrosMaisPesquisadosSoapIn" />
+      <wsdl:output message="tns:MostraLivrosMaisPesquisadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostraNumeroLivrosPesquisados">
+      <wsdl:input message="tns:MostraNumeroLivrosPesquisadosSoapIn" />
+      <wsdl:output message="tns:MostraNumeroLivrosPesquisadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostraNumeroLivrosComprados">
+      <wsdl:input message="tns:MostraNumeroLivrosCompradosSoapIn" />
+      <wsdl:output message="tns:MostraNumeroLivrosCompradosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostraNumeroLivrosCompradosComDesconto">
+      <wsdl:input message="tns:MostraNumeroLivrosCompradosComDescontoSoapIn" />
+      <wsdl:output message="tns:MostraNumeroLivrosCompradosComDescontoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostraNumeroLivrosCompradosSemDesconto">
+      <wsdl:input message="tns:MostraNumeroLivrosCompradosSemDescontoSoapIn" />
+      <wsdl:output message="tns:MostraNumeroLivrosCompradosSemDescontoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostraDadosGestao">
+      <wsdl:input message="tns:MostraDadosGestaoSoapIn" />
+      <wsdl:output message="tns:MostraDadosGestaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckOut">
+      <wsdl:input message="tns:CheckOutSoapIn" />
+      <wsdl:output message="tns:CheckOutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginUtilizador">
+      <wsdl:input message="tns:LoginUtilizadorSoapIn" />
+      <wsdl:output message="tns:LoginUtilizadorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelaEncomenda">
+      <wsdl:input message="tns:CancelaEncomendaSoapIn" />
+      <wsdl:output message="tns:CancelaEncomendaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AlteraEstadoEncomenda">
+      <wsdl:input message="tns:AlteraEstadoEncomendaSoapIn" />
+      <wsdl:output message="tns:AlteraEstadoEncomendaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostraEncomendasPendentes">
+      <wsdl:input message="tns:MostraEncomendasPendentesSoapIn" />
+      <wsdl:output message="tns:MostraEncomendasPendentesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostraEncomendasCanceladas">
+      <wsdl:input message="tns:MostraEncomendasCanceladasSoapIn" />
+      <wsdl:output message="tns:MostraEncomendasCanceladasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostraEncomendasColocadas">
+      <wsdl:input message="tns:MostraEncomendasColocadasSoapIn" />
+      <wsdl:output message="tns:MostraEncomendasColocadasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostraEncomendasEntregues">
+      <wsdl:input message="tns:MostraEncomendasEntreguesSoapIn" />
+      <wsdl:output message="tns:MostraEncomendasEntreguesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostraListaEncomendas">
+      <wsdl:input message="tns:MostraListaEncomendasSoapIn" />
+      <wsdl:output message="tns:MostraListaEncomendasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsereListaTopSellers">
+      <wsdl:input message="tns:InsereListaTopSellersSoapIn" />
+      <wsdl:output message="tns:InsereListaTopSellersSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WEBooksBDServiceSoap" type="tns:WEBooksBDServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsereCliente">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/InsereCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HistoricoComprasLivros">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/HistoricoComprasLivros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HistoricoComprasEncomenda">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/HistoricoComprasEncomenda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraEncomendasCliente">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/MostraEncomendasCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApagaCliente">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/ApagaCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraClientes">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/MostraClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraDadosCliente">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/MostraDadosCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereGestor">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/InsereGestor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereLivroCarrinhoCompras">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/InsereLivroCarrinhoCompras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaCarrinhoCompras">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/ListaCarrinhoCompras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveLivroDoCarrinhoCompras">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/RemoveLivroDoCarrinhoCompras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LimpaCarrinhoCompras">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/LimpaCarrinhoCompras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereListaPesquisaHistorico">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/InsereListaPesquisaHistorico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaPesquisaHistorico">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/ListaPesquisaHistorico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereListaLivros">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/InsereListaLivros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraEncomendasLivro">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/MostraEncomendasLivro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraLivrosMaisComprados">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/MostraLivrosMaisComprados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraLivrosMaisPesquisados">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/MostraLivrosMaisPesquisados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraNumeroLivrosPesquisados">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/MostraNumeroLivrosPesquisados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraNumeroLivrosComprados">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/MostraNumeroLivrosComprados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraNumeroLivrosCompradosComDesconto">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/MostraNumeroLivrosCompradosComDesconto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraNumeroLivrosCompradosSemDesconto">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/MostraNumeroLivrosCompradosSemDesconto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraDadosGestao">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/MostraDadosGestao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOut">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/CheckOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginUtilizador">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/LoginUtilizador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelaEncomenda">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/CancelaEncomenda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlteraEstadoEncomenda">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/AlteraEstadoEncomenda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraEncomendasPendentes">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/MostraEncomendasPendentes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraEncomendasCanceladas">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/MostraEncomendasCanceladas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraEncomendasColocadas">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/MostraEncomendasColocadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraEncomendasEntregues">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/MostraEncomendasEntregues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraListaEncomendas">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/MostraListaEncomendas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereListaTopSellers">
+      <soap:operation soapAction="http://www.WEBooksBD.pt/InsereListaTopSellers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WEBooksBDServiceSoap12" type="tns:WEBooksBDServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsereCliente">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/InsereCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HistoricoComprasLivros">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/HistoricoComprasLivros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HistoricoComprasEncomenda">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/HistoricoComprasEncomenda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraEncomendasCliente">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/MostraEncomendasCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApagaCliente">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/ApagaCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraClientes">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/MostraClientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraDadosCliente">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/MostraDadosCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereGestor">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/InsereGestor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereLivroCarrinhoCompras">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/InsereLivroCarrinhoCompras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaCarrinhoCompras">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/ListaCarrinhoCompras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveLivroDoCarrinhoCompras">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/RemoveLivroDoCarrinhoCompras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LimpaCarrinhoCompras">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/LimpaCarrinhoCompras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereListaPesquisaHistorico">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/InsereListaPesquisaHistorico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaPesquisaHistorico">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/ListaPesquisaHistorico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereListaLivros">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/InsereListaLivros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraEncomendasLivro">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/MostraEncomendasLivro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraLivrosMaisComprados">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/MostraLivrosMaisComprados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraLivrosMaisPesquisados">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/MostraLivrosMaisPesquisados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraNumeroLivrosPesquisados">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/MostraNumeroLivrosPesquisados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraNumeroLivrosComprados">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/MostraNumeroLivrosComprados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraNumeroLivrosCompradosComDesconto">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/MostraNumeroLivrosCompradosComDesconto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraNumeroLivrosCompradosSemDesconto">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/MostraNumeroLivrosCompradosSemDesconto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraDadosGestao">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/MostraDadosGestao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOut">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/CheckOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginUtilizador">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/LoginUtilizador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelaEncomenda">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/CancelaEncomenda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlteraEstadoEncomenda">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/AlteraEstadoEncomenda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraEncomendasPendentes">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/MostraEncomendasPendentes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraEncomendasCanceladas">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/MostraEncomendasCanceladas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraEncomendasColocadas">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/MostraEncomendasColocadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraEncomendasEntregues">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/MostraEncomendasEntregues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostraListaEncomendas">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/MostraListaEncomendas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereListaTopSellers">
+      <soap12:operation soapAction="http://www.WEBooksBD.pt/InsereListaTopSellers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WEBooksBDService">
+    <wsdl:port name="WEBooksBDServiceSoap" binding="tns:WEBooksBDServiceSoap">
+      <soap:address location="http://caseiro/WEBooksBD/WEBooksBDService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WEBooksBDServiceSoap12" binding="tns:WEBooksBDServiceSoap12">
+      <soap12:address location="http://caseiro/WEBooksBD/WEBooksBDService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

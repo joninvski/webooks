@@ -1,0 +1,1352 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="20b712c0-fc60-4ad7-ae74-dca9196153d5" LowerBound="1.1" HigherBound="472.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="WEBooksBiztalk.WEBooksBD.WEBooksBDService_" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="MethodMessageType" OID="00000000-0000-0000-0000-000000000000" ParentLink="Module_MessageType">
+            <om:Property Name="Url" Value="http://caseiro/WEBooksBD/WEBooksBDService.asmx" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="WEBooksBiztalk.WEBooksBD.WEBooksBDService" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MethodMessageOperation" OID="002ed5f2-f19d-4a15-9421-e9f416353361" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="InsereCliente" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InsereCliente_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="da4c1f3f-2fa5-4e25-850c-2a18f9be1fe1" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="nome" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="a0d32779-7e44-4324-85ee-413dd6b1892a" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="username" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="965e99a0-d5fa-4ad7-a2a1-073be24a46fd" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="password" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="ba6de62f-c6f5-46f3-aba9-0b32b9be2270" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="telefone" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="cef57c49-9078-49f0-96c0-6c72fa682793" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="numero" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="2c35cbd1-f8ee-4c77-b59c-a61a02088038" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="address" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="11cf79ee-0c7c-46cc-acf1-d165bfaaa03b" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="city" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="2e9be92a-4f79-453f-a8b9-c07b1ed26704" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="state" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="f212d5ea-4192-4e06-9aa9-732cdb81c55c" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ZIPcode" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="1bbc07d8-ed2a-465d-a446-e77190dbf082" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="country" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="24cf62b6-1663-424d-9c20-dde9b029dc47" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="longitude" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="d6612909-8ed5-4b2f-a332-cdfcf6b31bb4" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="latitude" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="398af2d6-0a2e-4918-b92b-a8d705bf8aaa" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="numCartaoCredito" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="5fbdabca-b02e-403b-b83c-238e176cef90" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="dataValidadeCartaoValidade" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="1a4f4bc7-cabc-4839-8c38-967839246cd4" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="InsereCliente" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InsereCliente_response" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="7acd2f69-dfe9-4553-826f-06a3671223eb" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="HistoricoComprasLivros" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="HistoricoComprasLivros_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="0ad0008a-6fad-40e4-864d-00737a1baa0b" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="username" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="61b9fcb5-d4b3-46e2-8e07-6d39fe88a228" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="HistoricoComprasLivros" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="HistoricoComprasLivros_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="164cfa99-4142-43c2-8530-9225692cf6c4" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.ArrayOfLivro" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="HistoricoComprasLivrosResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="5f83eadb-82ba-424f-a226-d83074ce5a67" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="HistoricoComprasEncomenda" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="HistoricoComprasEncomenda_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="9e6fc608-f58c-4dd1-a3a3-37b053e2832d" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="username" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="291c0f46-44f2-4fb2-b8f0-9bbbb0185036" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="HistoricoComprasEncomenda" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="HistoricoComprasEncomenda_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="b0bd3253-9474-4d60-b04c-94a46a029017" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.ArrayOfEncomenda" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="HistoricoComprasEncomendaResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="dca3224f-66af-4c2a-b885-30b151449c46" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraEncomendasCliente" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraEncomendasCliente_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="cac0ddbb-9620-4380-9a2d-0e0d580234d5" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="username" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="10e26084-db7e-4947-98e2-d1d842222a0a" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraEncomendasCliente" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraEncomendasCliente_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="9d7ee260-5bf9-4eda-8d30-d8cf371d931a" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.ArrayOfEncomenda" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MostraEncomendasClienteResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="a2ade88d-dddf-4de6-82ec-edde803794d5" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="ApagaCliente" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ApagaCliente_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="a37212bd-df85-4f0f-af10-0f27e9391feb" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="username" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="ccbe2ae1-91f7-4b23-b2b0-dfad182e97e1" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="ApagaCliente" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ApagaCliente_response" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="397977eb-2a1b-4303-baef-6b3202fb1aca" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraClientes" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraClientes_request" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="83830566-a1f5-43b6-bff5-206e815a2cbb" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraClientes" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraClientes_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="83659ff3-ae95-4f44-aabc-19c2cd687a41" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.ArrayOfCliente" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MostraClientesResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="c5aedfb7-0cfa-4e46-999f-0bc0cdabdd81" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraDadosCliente" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraDadosCliente_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="a2bc449f-2149-49f0-987e-703bddbd1fe6" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="username" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="f2fafb1a-8ad2-4002-a9e9-7d8002cd1c36" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraDadosCliente" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraDadosCliente_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="02573301-b37f-4bab-b873-c79560a32b59" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.Cliente" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MostraDadosClienteResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="4f3b6eac-75ab-49dd-b269-ce95575d5d41" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="InsereGestor" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InsereGestor_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="124f2a34-3a28-4f89-a329-22448de67905" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="nome" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="d3f2823e-2dc7-45f6-afa8-e65600277331" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="username" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="eaf27bfb-bf3d-44c1-9674-eb1f29f180e5" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="password" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="f5a01ea9-8c43-4327-a5ef-6f060e0fce48" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="InsereGestor" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InsereGestor_response" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="73c0099d-9c7e-4852-9f15-e9ed575cdaf4" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="InsereLivroCarrinhoCompras" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InsereLivroCarrinhoCompras_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="41a3151f-7680-4a53-9ed1-ffd4a3eb584f" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="username" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="0b8b49d0-ab35-4fed-b43c-5131538736fb" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ISBN" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="29e208e3-eb78-4e40-94e0-aa8a8ed97ae1" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.Int32" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="quantidade" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="a98d7c0c-7556-480c-aeee-c01536413af7" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="InsereLivroCarrinhoCompras" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InsereLivroCarrinhoCompras_response" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="359f6734-e693-420b-95fb-82a00751eb89" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="ListaCarrinhoCompras" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ListaCarrinhoCompras_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="39b351e2-1349-4776-8897-f8aac8a0b2c3" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="username" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="db5022c6-7121-44e0-8850-57d5884f0ee7" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="ListaCarrinhoCompras" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ListaCarrinhoCompras_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="96d920f0-8de5-487e-b2f6-afa29d3d4e68" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.ArrayOfLivro" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ListaCarrinhoComprasResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="391cf7c5-4ce5-4023-b015-aa83733b63e0" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="RemoveLivroDoCarrinhoCompras" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RemoveLivroDoCarrinhoCompras_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="5ad98716-cc62-4e05-aba0-e4ea05d7c3a1" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="username" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="afa59023-3108-43dc-b489-10fbef36884c" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ISBN" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="f7698855-fa73-419a-b9d4-609cbb6f52fc" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="nomeFornecedor" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="cd1c5fc5-34c8-4eb9-9774-6f5f6b0fd5df" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="RemoveLivroDoCarrinhoCompras" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RemoveLivroDoCarrinhoCompras_response" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="e809b372-179d-4917-b491-dafb167c1518" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="LimpaCarrinhoCompras" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="LimpaCarrinhoCompras_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="65e68d13-c129-4b27-8960-846f56b91b12" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="username" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="b5ec8f34-6c27-4fad-bca9-aec6d4828dba" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="LimpaCarrinhoCompras" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="LimpaCarrinhoCompras_response" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="e2324744-cff0-4be1-8d5d-56c86468368d" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="InsereListaPesquisaHistorico" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InsereListaPesquisaHistorico_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="92d9c12d-e46f-40a3-b9d1-13691772c05f" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.ArrayOfLivro" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="listaLivros" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="51a3ccb4-db9e-418d-8fab-8933cefef78a" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="username" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="5457c543-4375-460a-9a2d-5ba9ca7fe42c" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="InsereListaPesquisaHistorico" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InsereListaPesquisaHistorico_response" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="7e182a12-d696-49d6-a8e1-71dcc108b34c" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="ListaPesquisaHistorico" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ListaPesquisaHistorico_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="e556880d-489f-401b-99c8-ebd108ec1c8a" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="username" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="72566840-4541-4540-a4ee-9fc01fe16b01" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="ListaPesquisaHistorico" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ListaPesquisaHistorico_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="9a0a36b6-99e7-4140-9931-23d755aa49d8" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.ArrayOfLivro" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ListaPesquisaHistoricoResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="350a1f1b-c830-44b8-bc7a-451e0861a4a1" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="InsereListaLivros" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InsereListaLivros_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="a6c22338-1eb3-4d1b-9c3a-7bda8dc002cc" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.ArrayOfLivro" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="listaLivros" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="c6bf5c2d-4c1c-4b2e-8c23-18893bb74ecd" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="InsereListaLivros" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InsereListaLivros_response" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="1a5a755d-b7c1-47b1-b791-a6719eed41c5" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraEncomendasLivro" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraEncomendasLivro_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="6d270b43-0030-4519-84cb-6e90c0d89ec2" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ISBN" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="58ffa2b4-039b-406f-976a-7f9b73ba0164" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraEncomendasLivro" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraEncomendasLivro_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="9c657b8c-f5ab-4b36-a671-e5a78a56c810" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.ArrayOfEncomenda" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MostraEncomendasLivroResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="8f0cedc4-cefa-49e6-ad86-e67d8972e7d6" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraLivrosMaisComprados" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraLivrosMaisComprados_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="7d6b7752-885d-41ab-a471-c902fd25cf8b" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.Int32" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="numeroLivros" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="d967119e-f0a5-4881-b08b-8c56230b024d" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraLivrosMaisComprados" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraLivrosMaisComprados_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="152d8395-43b1-4f00-9e7e-7db9021c649d" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.ArrayOfLivro" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MostraLivrosMaisCompradosResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="9a8c0ba6-8890-430e-8e0e-8c3bef8e2f71" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraLivrosMaisPesquisados" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraLivrosMaisPesquisados_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="d3d1d1ec-a6e1-4f8d-93d4-5ea79aaef662" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.Int32" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="numeroLivros" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="6f3d4875-5299-420d-933e-8819165dbc45" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraLivrosMaisPesquisados" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraLivrosMaisPesquisados_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="0ad716f4-c123-4e35-8b19-d9969b8c89a6" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.ArrayOfLivro" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MostraLivrosMaisPesquisadosResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="cc938d3b-aee9-45f9-b9b8-9e2b468daf37" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraNumeroLivrosPesquisados" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraNumeroLivrosPesquisados_request" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="439bfe8a-d233-49c0-a4b7-4812ca53edab" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraNumeroLivrosPesquisados" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraNumeroLivrosPesquisados_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="c489069a-abac-4377-bbb4-c6c1998858c4" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.Int32" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MostraNumeroLivrosPesquisadosResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="5b3d96a3-86b4-4c8c-a36b-46af0ba17d00" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraNumeroLivrosComprados" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraNumeroLivrosComprados_request" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="94a97f7d-0b0b-4305-9a26-be7a734cce0e" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraNumeroLivrosComprados" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraNumeroLivrosComprados_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="8ae5b4bf-178c-4cc0-a8bd-643dc583753f" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.Int32" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MostraNumeroLivrosCompradosResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="18ff443e-56d9-4af2-83d8-e5c7bba10db7" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraNumeroLivrosCompradosComDesconto" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraNumeroLivrosCompradosComDesconto_request" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="0869e137-b3e5-4cb7-b988-ea232913ce22" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraNumeroLivrosCompradosComDesconto" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraNumeroLivrosCompradosComDesconto_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="822fe2d2-3c1b-4043-b268-52d82715f3d8" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.Int32" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MostraNumeroLivrosCompradosComDescontoResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="3d297a8c-86aa-4263-87ff-b1c2141a71a3" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraNumeroLivrosCompradosSemDesconto" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraNumeroLivrosCompradosSemDesconto_request" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="cc64cd36-d58a-4213-ab78-c8a23c78f814" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraNumeroLivrosCompradosSemDesconto" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraNumeroLivrosCompradosSemDesconto_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="da470efa-ca84-4530-b159-fd7a841fda80" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.Int32" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MostraNumeroLivrosCompradosSemDescontoResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="abc98ac7-a717-4070-a468-252b27e3108f" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraDadosGestao" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraDadosGestao_request" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="302cb042-7ef1-42da-ad2e-c2a2a6ef2e30" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraDadosGestao" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraDadosGestao_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="3a2bf30c-454f-4bc9-8ade-65971eb16af7" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.DadosGestao" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MostraDadosGestaoResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="e0799c44-9b47-41da-9795-8a646dc3f396" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="CheckOut" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CheckOut_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="05f99626-036e-4a13-982b-6652b9a06d37" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="username" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="73f33da9-8dc6-489a-b4b9-e10ff6d547aa" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="CheckOut" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CheckOut_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="a1e837fa-1b14-4d2d-9173-87131e48e695" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.Encomenda" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="CheckOutResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="e79f2b1c-5fab-4b0f-b456-646b0484e66b" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="LoginUtilizador" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="LoginUtilizador_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="0922b8f5-e1a7-4f53-a14b-5db8113c3822" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="username" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="bd94e495-6de6-457e-865b-0820a505bba2" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="password" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="bb48284e-a0d3-4f07-a8c5-12769f414bf7" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="LoginUtilizador" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="LoginUtilizador_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="704e7225-83fe-4d7d-a7ec-89733fc00313" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.Utilizador" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="LoginUtilizadorResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="3a30680d-3e59-4e9d-941a-e9ea6ca81e68" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="CancelaEncomenda" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CancelaEncomenda_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="63384dae-3160-4500-b364-9ee7d06d3fb3" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="idEncomenda" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="f77b8d3c-b216-44e5-a642-6a103b7c2f2d" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="CancelaEncomenda" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CancelaEncomenda_response" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="59e5444e-3431-4563-979f-394a5dd4412c" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="AlteraEstadoEncomenda" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AlteraEstadoEncomenda_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="70653a58-bec5-4e6b-a12a-8ff906b6c223" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="idEncomenda" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="1d725371-2b70-48b1-a19c-b15c8bc2394b" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="novoEstado" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="32bffb6b-47ec-4df4-b4a5-6085bdd7749b" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="AlteraEstadoEncomenda" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AlteraEstadoEncomenda_response" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="687c55a2-4324-4cae-bf48-eb29351521d0" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraEncomendasPendentes" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraEncomendasPendentes_request" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="082f1673-3fbe-4abd-ad46-3c8a99ff45ff" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraEncomendasPendentes" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraEncomendasPendentes_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="b9e2fc8b-672d-47e8-b421-cbef1e3a779b" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.ArrayOfEncomenda" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MostraEncomendasPendentesResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="357249d6-b7eb-4363-be14-395019fa4b7d" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraEncomendasCanceladas" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraEncomendasCanceladas_request" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="89c596a3-3226-45ed-aaaf-d0846c10926d" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraEncomendasCanceladas" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraEncomendasCanceladas_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="7b2a41ff-17b4-4477-91b8-0a4c7b68f958" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.ArrayOfEncomenda" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MostraEncomendasCanceladasResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="9540ba80-08c1-4458-a2cb-c73290524f82" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraEncomendasColocadas" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraEncomendasColocadas_request" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="d356a25d-dd1e-4082-8f80-40d56af3e71d" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraEncomendasColocadas" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraEncomendasColocadas_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="ecc6fd2b-b7ec-4f0e-9370-3a4720e05756" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.ArrayOfEncomenda" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MostraEncomendasColocadasResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="3fad30fa-6f0e-431c-ab84-feace2d8241f" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraEncomendasEntregues" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraEncomendasEntregues_request" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="1d880a2f-e134-4ac8-8864-f2d6f5e39641" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraEncomendasEntregues" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraEncomendasEntregues_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="6bb626f9-0186-42bc-86af-c4bafb25469b" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.ArrayOfEncomenda" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MostraEncomendasEntreguesResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="1ae93f70-ecd0-449e-8566-15037531bae0" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraListaEncomendas" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraListaEncomendas_request" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="0fa23ef5-df9a-44be-a1b5-a18fbd3186c2" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="MostraListaEncomendas" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MostraListaEncomendas_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="c27d2560-4a32-4f30-a7c0-9f74da6b4684" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.ArrayOfEncomenda" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MostraListaEncomendasResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="f6f503e1-cbb0-4b94-80fb-a89e7a609a90" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="InsereListaTopSellers" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InsereListaTopSellers_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="392066d9-1cab-41e9-81ec-4d22e4957133" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksBD.Reference.ArrayOfLivroPromocao" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="listaLivrosPromocao" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="2a652972-6572-407e-a49a-624029f7c99e" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="InsereListaTopSellers" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InsereListaTopSellers_response" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="TargetXMLNamespaceAttribute" OID="7899f4a3-6012-4c7d-9b46-b3f05ed469db" ParentLink="Module_CLRAttribute" LowerBound="2.1" HigherBound="3.1">
+            <om:Property Name="TargetXMLNamespace" Value="http://www.WEBooksBD.pt/" />
+            <om:Property Name="Signal" Value="False" />
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(true)]
+[Microsoft.XLANGs.BaseTypes.TargetXmlNamespaceAttribute("http://www.WEBooksBD.pt/")]
+module WEBooksBiztalk.WEBooksBD.WEBooksBDService_
+{
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "InsereCliente", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype InsereCliente_request
+    {
+        body System.String nome;
+        System.String username;
+        System.String password;
+        System.String telefone;
+        System.String numero;
+        System.String address;
+        System.String city;
+        System.String state;
+        System.String ZIPcode;
+        System.String country;
+        System.String longitude;
+        System.String latitude;
+        System.String numCartaoCredito;
+        System.String dataValidadeCartaoValidade;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "InsereCliente", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype InsereCliente_response
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "HistoricoComprasLivros", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype HistoricoComprasLivros_request
+    {
+        body System.String username;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "HistoricoComprasLivros", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype HistoricoComprasLivros_response
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.ArrayOfLivro HistoricoComprasLivrosResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "HistoricoComprasEncomenda", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype HistoricoComprasEncomenda_request
+    {
+        body System.String username;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "HistoricoComprasEncomenda", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype HistoricoComprasEncomenda_response
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.ArrayOfEncomenda HistoricoComprasEncomendaResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraEncomendasCliente", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype MostraEncomendasCliente_request
+    {
+        body System.String username;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraEncomendasCliente", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype MostraEncomendasCliente_response
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.ArrayOfEncomenda MostraEncomendasClienteResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "ApagaCliente", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype ApagaCliente_request
+    {
+        body System.String username;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "ApagaCliente", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype ApagaCliente_response
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraClientes", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype MostraClientes_request
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraClientes", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype MostraClientes_response
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.ArrayOfCliente MostraClientesResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraDadosCliente", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype MostraDadosCliente_request
+    {
+        body System.String username;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraDadosCliente", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype MostraDadosCliente_response
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.Cliente MostraDadosClienteResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "InsereGestor", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype InsereGestor_request
+    {
+        body System.String nome;
+        System.String username;
+        System.String password;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "InsereGestor", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype InsereGestor_response
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "InsereLivroCarrinhoCompras", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype InsereLivroCarrinhoCompras_request
+    {
+        body System.String username;
+        System.String ISBN;
+        System.Int32 quantidade;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "InsereLivroCarrinhoCompras", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype InsereLivroCarrinhoCompras_response
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "ListaCarrinhoCompras", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype ListaCarrinhoCompras_request
+    {
+        body System.String username;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "ListaCarrinhoCompras", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype ListaCarrinhoCompras_response
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.ArrayOfLivro ListaCarrinhoComprasResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "RemoveLivroDoCarrinhoCompras", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype RemoveLivroDoCarrinhoCompras_request
+    {
+        body System.String username;
+        System.String ISBN;
+        System.String nomeFornecedor;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "RemoveLivroDoCarrinhoCompras", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype RemoveLivroDoCarrinhoCompras_response
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "LimpaCarrinhoCompras", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype LimpaCarrinhoCompras_request
+    {
+        body System.String username;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "LimpaCarrinhoCompras", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype LimpaCarrinhoCompras_response
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "InsereListaPesquisaHistorico", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype InsereListaPesquisaHistorico_request
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.ArrayOfLivro listaLivros;
+        System.String username;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "InsereListaPesquisaHistorico", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype InsereListaPesquisaHistorico_response
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "ListaPesquisaHistorico", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype ListaPesquisaHistorico_request
+    {
+        body System.String username;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "ListaPesquisaHistorico", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype ListaPesquisaHistorico_response
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.ArrayOfLivro ListaPesquisaHistoricoResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "InsereListaLivros", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype InsereListaLivros_request
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.ArrayOfLivro listaLivros;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "InsereListaLivros", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype InsereListaLivros_response
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraEncomendasLivro", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype MostraEncomendasLivro_request
+    {
+        body System.String ISBN;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraEncomendasLivro", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype MostraEncomendasLivro_response
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.ArrayOfEncomenda MostraEncomendasLivroResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraLivrosMaisComprados", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype MostraLivrosMaisComprados_request
+    {
+        body System.Int32 numeroLivros;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraLivrosMaisComprados", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype MostraLivrosMaisComprados_response
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.ArrayOfLivro MostraLivrosMaisCompradosResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraLivrosMaisPesquisados", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype MostraLivrosMaisPesquisados_request
+    {
+        body System.Int32 numeroLivros;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraLivrosMaisPesquisados", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype MostraLivrosMaisPesquisados_response
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.ArrayOfLivro MostraLivrosMaisPesquisadosResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraNumeroLivrosPesquisados", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype MostraNumeroLivrosPesquisados_request
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraNumeroLivrosPesquisados", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype MostraNumeroLivrosPesquisados_response
+    {
+        body System.Int32 MostraNumeroLivrosPesquisadosResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraNumeroLivrosComprados", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype MostraNumeroLivrosComprados_request
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraNumeroLivrosComprados", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype MostraNumeroLivrosComprados_response
+    {
+        body System.Int32 MostraNumeroLivrosCompradosResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraNumeroLivrosCompradosComDesconto", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype MostraNumeroLivrosCompradosComDesconto_request
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraNumeroLivrosCompradosComDesconto", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype MostraNumeroLivrosCompradosComDesconto_response
+    {
+        body System.Int32 MostraNumeroLivrosCompradosComDescontoResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraNumeroLivrosCompradosSemDesconto", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype MostraNumeroLivrosCompradosSemDesconto_request
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraNumeroLivrosCompradosSemDesconto", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype MostraNumeroLivrosCompradosSemDesconto_response
+    {
+        body System.Int32 MostraNumeroLivrosCompradosSemDescontoResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraDadosGestao", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype MostraDadosGestao_request
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraDadosGestao", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype MostraDadosGestao_response
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.DadosGestao MostraDadosGestaoResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "CheckOut", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype CheckOut_request
+    {
+        body System.String username;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "CheckOut", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype CheckOut_response
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.Encomenda CheckOutResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "LoginUtilizador", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype LoginUtilizador_request
+    {
+        body System.String username;
+        System.String password;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "LoginUtilizador", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype LoginUtilizador_response
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.Utilizador LoginUtilizadorResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "CancelaEncomenda", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype CancelaEncomenda_request
+    {
+        body System.String idEncomenda;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "CancelaEncomenda", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype CancelaEncomenda_response
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "AlteraEstadoEncomenda", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype AlteraEstadoEncomenda_request
+    {
+        body System.String idEncomenda;
+        System.String novoEstado;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "AlteraEstadoEncomenda", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype AlteraEstadoEncomenda_response
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraEncomendasPendentes", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype MostraEncomendasPendentes_request
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraEncomendasPendentes", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype MostraEncomendasPendentes_response
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.ArrayOfEncomenda MostraEncomendasPendentesResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraEncomendasCanceladas", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype MostraEncomendasCanceladas_request
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraEncomendasCanceladas", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype MostraEncomendasCanceladas_response
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.ArrayOfEncomenda MostraEncomendasCanceladasResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraEncomendasColocadas", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype MostraEncomendasColocadas_request
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraEncomendasColocadas", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype MostraEncomendasColocadas_response
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.ArrayOfEncomenda MostraEncomendasColocadasResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraEncomendasEntregues", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype MostraEncomendasEntregues_request
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraEncomendasEntregues", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype MostraEncomendasEntregues_response
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.ArrayOfEncomenda MostraEncomendasEntreguesResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraListaEncomendas", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype MostraListaEncomendas_request
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "MostraListaEncomendas", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype MostraListaEncomendas_response
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.ArrayOfEncomenda MostraListaEncomendasResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "InsereListaTopSellers", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype InsereListaTopSellers_request
+    {
+        body WEBooksBiztalk.WEBooksBD.Reference.ArrayOfLivroPromocao listaLivrosPromocao;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService), "InsereListaTopSellers", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype InsereListaTopSellers_response
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WSDLProxyName(typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService))]
+    public porttype WEBooksBDService
+    {
+        requestresponse InsereListaLivros
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.InsereListaLivros_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.InsereListaLivros_response
+        };
+        requestresponse MostraEncomendasColocadas
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraEncomendasColocadas_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraEncomendasColocadas_response
+        };
+        requestresponse MostraLivrosMaisComprados
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraLivrosMaisComprados_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraLivrosMaisComprados_response
+        };
+        requestresponse MostraEncomendasLivro
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraEncomendasLivro_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraEncomendasLivro_response
+        };
+        requestresponse MostraNumeroLivrosComprados
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraNumeroLivrosComprados_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraNumeroLivrosComprados_response
+        };
+        requestresponse ListaPesquisaHistorico
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.ListaPesquisaHistorico_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.ListaPesquisaHistorico_response
+        };
+        requestresponse MostraNumeroLivrosPesquisados
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraNumeroLivrosPesquisados_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraNumeroLivrosPesquisados_response
+        };
+        requestresponse MostraDadosCliente
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraDadosCliente_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraDadosCliente_response
+        };
+        requestresponse MostraListaEncomendas
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraListaEncomendas_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraListaEncomendas_response
+        };
+        requestresponse AlteraEstadoEncomenda
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.AlteraEstadoEncomenda_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.AlteraEstadoEncomenda_response
+        };
+        requestresponse ApagaCliente
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.ApagaCliente_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.ApagaCliente_response
+        };
+        requestresponse LimpaCarrinhoCompras
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.LimpaCarrinhoCompras_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.LimpaCarrinhoCompras_response
+        };
+        requestresponse ListaCarrinhoCompras
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.ListaCarrinhoCompras_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.ListaCarrinhoCompras_response
+        };
+        requestresponse MostraNumeroLivrosCompradosComDesconto
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraNumeroLivrosCompradosComDesconto_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraNumeroLivrosCompradosComDesconto_response
+        };
+        requestresponse CancelaEncomenda
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.CancelaEncomenda_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.CancelaEncomenda_response
+        };
+        requestresponse MostraLivrosMaisPesquisados
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraLivrosMaisPesquisados_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraLivrosMaisPesquisados_response
+        };
+        requestresponse MostraDadosGestao
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraDadosGestao_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraDadosGestao_response
+        };
+        requestresponse MostraNumeroLivrosCompradosSemDesconto
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraNumeroLivrosCompradosSemDesconto_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraNumeroLivrosCompradosSemDesconto_response
+        };
+        requestresponse InsereListaTopSellers
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.InsereListaTopSellers_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.InsereListaTopSellers_response
+        };
+        requestresponse InsereGestor
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.InsereGestor_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.InsereGestor_response
+        };
+        requestresponse MostraClientes
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraClientes_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraClientes_response
+        };
+        requestresponse LoginUtilizador
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.LoginUtilizador_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.LoginUtilizador_response
+        };
+        requestresponse HistoricoComprasLivros
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.HistoricoComprasLivros_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.HistoricoComprasLivros_response
+        };
+        requestresponse HistoricoComprasEncomenda
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.HistoricoComprasEncomenda_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.HistoricoComprasEncomenda_response
+        };
+        requestresponse MostraEncomendasPendentes
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraEncomendasPendentes_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraEncomendasPendentes_response
+        };
+        requestresponse CheckOut
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.CheckOut_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.CheckOut_response
+        };
+        requestresponse RemoveLivroDoCarrinhoCompras
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.RemoveLivroDoCarrinhoCompras_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.RemoveLivroDoCarrinhoCompras_response
+        };
+        requestresponse InsereCliente
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.InsereCliente_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.InsereCliente_response
+        };
+        requestresponse MostraEncomendasCliente
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraEncomendasCliente_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraEncomendasCliente_response
+        };
+        requestresponse MostraEncomendasEntregues
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraEncomendasEntregues_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraEncomendasEntregues_response
+        };
+        requestresponse InsereLivroCarrinhoCompras
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.InsereLivroCarrinhoCompras_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.InsereLivroCarrinhoCompras_response
+        };
+        requestresponse InsereListaPesquisaHistorico
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.InsereListaPesquisaHistorico_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.InsereListaPesquisaHistorico_response
+        };
+        requestresponse MostraEncomendasCanceladas
+        {
+            WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraEncomendasCanceladas_request, WEBooksBiztalk.WEBooksBD.WEBooksBDService_.MostraEncomendasCanceladas_response
+        };
+    };
+}
+

@@ -1,0 +1,1221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<brl xmlns="http://schemas.microsoft.com/businessruleslanguage/2002">
+  <vocabulary id="3f0e9bcc-6212-4e6a-853c-e517f157a626" name="Predicates" uri="Predicates" description="Built-in predicates provided by the Rules Engine">
+    <version major="0" minor="0" description="initial version" modifiedby="Microsoft" date="2003-04-18T21:22:22.3760408+01:00" />
+    <version major="1" minor="0" description="initial version" modifiedby="Microsoft" date="2003-04-18T21:22:22.3760408+01:00" />
+    <vocabularydefinition id="aff538e1-89fd-4773-b991-0363b7f0d5c2" name="Range" description="Tests whether a value is within a range defined by the lower bound value (inclusive) and upper bound value (inclusive).">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Range">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="91a79cbf-e35f-46c6-aa28-a1e075bcf57e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="4a59ee30-65c8-4691-8afa-2f37a72754de" />
+        </argument>
+        <argument position="2">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="23d03dc8-5886-4a6f-baea-5b0b0de3faad" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="{0} is between {1} and {2}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="91a79cbf-e35f-46c6-aa28-a1e075bcf57e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="4a59ee30-65c8-4691-8afa-2f37a72754de" />
+        </argument>
+        <argument position="2">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="23d03dc8-5886-4a6f-baea-5b0b0de3faad" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="05703dd9-1111-40b8-890d-ad7bfc45a925" name="Equal" description="‘Equal to’ relational operator.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Equal">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="1e00a3f7-e4de-4ed3-b7ec-daec004b9b5e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="6c381721-eaad-4fbd-8d16-28655bd59c09" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="{0} is equal to {1}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="1e00a3f7-e4de-4ed3-b7ec-daec004b9b5e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="6c381721-eaad-4fbd-8d16-28655bd59c09" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="b276a0f4-12d9-4380-b242-135bbfc5e287" name="GreaterThan" description="‘Greater than’ relational operator.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.GreaterThan">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="1e00a3f7-e4de-4ed3-b7ec-daec004b9b5e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="6c381721-eaad-4fbd-8d16-28655bd59c09" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="{0} is greater than {1}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="1e00a3f7-e4de-4ed3-b7ec-daec004b9b5e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="6c381721-eaad-4fbd-8d16-28655bd59c09" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="4ac045f2-f5ad-42cf-8e20-76d3f7f683f1" name="GreaterThanEqual" description="‘Greater than or equal to’ relational operator.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.GreaterThanEqual">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="1e00a3f7-e4de-4ed3-b7ec-daec004b9b5e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="6c381721-eaad-4fbd-8d16-28655bd59c09" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="{0} is greater than or equal to {1}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="1e00a3f7-e4de-4ed3-b7ec-daec004b9b5e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="6c381721-eaad-4fbd-8d16-28655bd59c09" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="bb1fbbfc-b007-42e9-b29c-3b82fa74aabb" name="Between" description="Tests whether a datetime occurs within a period defined by two datetime values.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Between">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="ed98cbe9-dea1-4c5d-88f7-3c42853b93aa" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="3e348cfc-8ff4-44e0-ae58-1efeebcb7624" />
+        </argument>
+        <argument position="2">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="f9893953-c979-4c8d-8f17-56f8730c9acd" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="{0} is between {1} and {2}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="ed98cbe9-dea1-4c5d-88f7-3c42853b93aa" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="3e348cfc-8ff4-44e0-ae58-1efeebcb7624" />
+        </argument>
+        <argument position="2">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="f9893953-c979-4c8d-8f17-56f8730c9acd" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="1c177bf4-a970-4669-a768-a74d33af190d" name="LessThan" description="‘Less than’ relational operator.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.LessThan">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="1e00a3f7-e4de-4ed3-b7ec-daec004b9b5e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="6c381721-eaad-4fbd-8d16-28655bd59c09" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="{0} is less than {1}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="1e00a3f7-e4de-4ed3-b7ec-daec004b9b5e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="6c381721-eaad-4fbd-8d16-28655bd59c09" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="c22af575-9920-417c-a545-67fa0ece9832" name="NotEqual" description="‘Not equal to’ relational operator.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.NotEqual">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="1e00a3f7-e4de-4ed3-b7ec-daec004b9b5e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="6c381721-eaad-4fbd-8d16-28655bd59c09" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="{0} is not equal to {1}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="1e00a3f7-e4de-4ed3-b7ec-daec004b9b5e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="6c381721-eaad-4fbd-8d16-28655bd59c09" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="949cabdb-16a5-42cf-a80d-e45fec6d0a62" name="Match" description="Tests whether the specified text contains a substring that matches a specified regular expression.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Match">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="e56eae51-c36b-4d09-ac8a-509f67ac234e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="de798523-816f-4d80-95eb-aa1770f0aed2" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="{1} contains {0}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="e56eae51-c36b-4d09-ac8a-509f67ac234e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="de798523-816f-4d80-95eb-aa1770f0aed2" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="970c3ffe-de9e-4523-82b8-974a3c1eb686" name="Exists" description="Tests for the existence of an XML node (defined by an XPath expression) in the specified XML document.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Exists">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="83e7dbfd-9d2e-4026-8961-f32ffa23c4fe" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="cb16a9e2-33a2-49b6-a2e5-85c01be5a383" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="{1} exists in {0}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="83e7dbfd-9d2e-4026-8961-f32ffa23c4fe" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="cb16a9e2-33a2-49b6-a2e5-85c01be5a383" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="d4eb2deb-06d3-42c4-af49-ceb21331b1cc" name="LessThanEqual" description="‘Less than or equal to’ relational operator.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.LessThanEqual">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="1e00a3f7-e4de-4ed3-b7ec-daec004b9b5e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="6c381721-eaad-4fbd-8d16-28655bd59c09" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="{0} is less than or equal to {1}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="1e00a3f7-e4de-4ed3-b7ec-daec004b9b5e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="6c381721-eaad-4fbd-8d16-28655bd59c09" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="1afff1c3-efc7-43d9-890a-c2fe9f147417" name="After" description="Tests whether a datetime happens after another datetime.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.After">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="ed98cbe9-dea1-4c5d-88f7-3c42853b93aa" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="3e348cfc-8ff4-44e0-ae58-1efeebcb7624" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="{0} is after {1}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="ed98cbe9-dea1-4c5d-88f7-3c42853b93aa" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="3e348cfc-8ff4-44e0-ae58-1efeebcb7624" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="9294485b-04ad-4682-92c8-319fe8218bb5" name="Before" description="Tests whether a datetime happens before another datetime.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Before">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="ed98cbe9-dea1-4c5d-88f7-3c42853b93aa" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="3e348cfc-8ff4-44e0-ae58-1efeebcb7624" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="{0} is before {1}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="ed98cbe9-dea1-4c5d-88f7-3c42853b93aa" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="3e348cfc-8ff4-44e0-ae58-1efeebcb7624" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+  </vocabulary>
+  <vocabulary id="aee857f2-09d5-4615-a96c-87041791ec42" name="Functions" uri="Functions" description="Built-in functions provided by the Rules Engine">
+    <version major="0" minor="0" description="initial version" modifiedby="Microsoft" date="2003-04-18T21:22:22.3916664+01:00" />
+    <version major="1" minor="0" description="initial version" modifiedby="Microsoft" date="2003-04-18T21:22:22.3760408+01:00" />
+    <vocabularydefinition id="8a871580-7fd0-4910-9fbf-46f702a3f384" name="Assert" description="Adds a new fact to the current rule engine instance.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Assert">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="aeb41266-5816-438e-a319-62978a73b671" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="assert {0}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="aeb41266-5816-438e-a319-62978a73b671" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="d6515f3c-d7e6-4c24-80a9-d072fdeb2de5" name="Retract" description="Removes the specified fact from the current rule engine instance.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Retract">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="aeb41266-5816-438e-a319-62978a73b671" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="retract {0}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="aeb41266-5816-438e-a319-62978a73b671" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="5a5040a5-2bf2-4016-bda1-f46d2d7e637b" name="Subtract" description="Subtracts two numeric values.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Subtract">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="91a79cbf-e35f-46c6-aa28-a1e075bcf57e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="4a59ee30-65c8-4691-8afa-2f37a72754de" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="({0} - {1})" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="91a79cbf-e35f-46c6-aa28-a1e075bcf57e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="4a59ee30-65c8-4691-8afa-2f37a72754de" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="57517cc6-6bb7-46eb-99eb-a1fdddd5d2f6" name="Update" description="Refreshes the specified fact in the current rule engine instance.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Update">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="aeb41266-5816-438e-a319-62978a73b671" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="update {0}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="aeb41266-5816-438e-a319-62978a73b671" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="81c22bf0-5db1-4d7a-a2f3-8ad732672c58" name="Minute" description="Returns the minute from the specified datetime, a number from 0 to 59.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Minute">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="0b0451d0-999e-407b-a802-8acc306a4608" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="minute from {0}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="0b0451d0-999e-407b-a802-8acc306a4608" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="71badb60-b7db-4e54-baf3-9cff27c316ee" name="Create" description="Creates a .NET object instance using an appropriate class constructor.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.CreateObject">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="1e00a3f7-e4de-4ed3-b7ec-daec004b9b5e" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="new {0}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="1e00a3f7-e4de-4ed3-b7ec-daec004b9b5e" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="f08c6061-7ebc-49e0-974c-36a45b75d73c" name="Clear" description="Clears all facts and rule firings from the current rule engine instance.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Clear" />
+      <formatstring language="" string="clear" />
+    </vocabularydefinition>
+    <vocabularydefinition id="2db58a18-1a17-468c-9f69-4d4f2fa3159d" name="Executor" description="Returns a reference to the current rule engine instance.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Executor" />
+      <formatstring language="" string="executor" />
+    </vocabularydefinition>
+    <vocabularydefinition id="73b04923-5641-4bff-9c0b-6778fcc926ac" name="Month" description="Returns the month from the specified datetime, a number from 1 (January) to 12 (December).">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Month">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="0b0451d0-999e-407b-a802-8acc306a4608" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="month from {0}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="0b0451d0-999e-407b-a802-8acc306a4608" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="13258341-f3ad-4382-b4e8-39f33453a9ee" name="FindFirst" description="Returns the first substring that matches a specified regular expression in the specified text.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.FindFirst">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="e56eae51-c36b-4d09-ac8a-509f67ac234e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="de798523-816f-4d80-95eb-aa1770f0aed2" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="first occurrence of {0} in {1}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="e56eae51-c36b-4d09-ac8a-509f67ac234e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="de798523-816f-4d80-95eb-aa1770f0aed2" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="e4f682e3-00de-4984-9788-adf916130a98" name="Remainder" description="Returns the remainder after a number is divided by a divisor.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Remainder">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="91a79cbf-e35f-46c6-aa28-a1e075bcf57e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="4a59ee30-65c8-4691-8afa-2f37a72754de" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="({0} % {1})" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="91a79cbf-e35f-46c6-aa28-a1e075bcf57e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="4a59ee30-65c8-4691-8afa-2f37a72754de" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="c5b576bf-2d75-40ae-a193-e46c2f8d5fbf" name="RetractByType" description="Removes all existing facts of the specified fact type from the current rule engine instance.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.RetractByType">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="a08c0f95-8576-49ff-a3ef-fd265d33ad7b" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="retract all objects of type {0}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="a08c0f95-8576-49ff-a3ef-fd265d33ad7b" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="e6441f2e-aba9-4999-948f-f179dfeeb187" name="DayOfWeek" description="Returns the day of the week from the specified datetime, a number from 0 (Sunday) to 6 (Saturday).">
+      <engineoperationdefinition type="Microsoft.RuleEngine.DayOfWeek">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="0b0451d0-999e-407b-a802-8acc306a4608" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="day of week from {0}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="0b0451d0-999e-407b-a802-8acc306a4608" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="87bafd15-754f-48a0-b6ce-daed45ad57c8" name="TimeOfDay" description="Returns the time of day from the specified datetime.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.TimeOfDay">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="0b0451d0-999e-407b-a802-8acc306a4608" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="time of day from {0}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="0b0451d0-999e-407b-a802-8acc306a4608" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="f88eebdf-7b6b-4bf1-9dc9-57fb1bd5b179" name="FindAll" description="Returns all substrings that match a specified regular expression in the specified text.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.FindAll">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="e56eae51-c36b-4d09-ac8a-509f67ac234e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="de798523-816f-4d80-95eb-aa1770f0aed2" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="all occurrences of {0} in {1}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="e56eae51-c36b-4d09-ac8a-509f67ac234e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="de798523-816f-4d80-95eb-aa1770f0aed2" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="1f7f38be-86e6-4b42-a62d-38208f160317" name="Year" description="Returns the year from the specified datetime, an number in the range 1 - 9999.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Year">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="0b0451d0-999e-407b-a802-8acc306a4608" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="year from {0}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="0b0451d0-999e-407b-a802-8acc306a4608" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="e49242c4-4f9c-42a5-b382-6c510652a75e" name="Add" description="Adds two numeric values.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Add">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="91a79cbf-e35f-46c6-aa28-a1e075bcf57e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="4a59ee30-65c8-4691-8afa-2f37a72754de" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="({0} + {1})" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="91a79cbf-e35f-46c6-aa28-a1e075bcf57e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="4a59ee30-65c8-4691-8afa-2f37a72754de" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="3486b611-7338-439a-9191-4fb6b0ff95fa" name="Hour" description="Returns the hour from the specified datetime, a number from 0 (12:00 A.M.) to 23 (11:00 P.M.).">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Hour">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="0b0451d0-999e-407b-a802-8acc306a4608" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="hour from {0}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="0b0451d0-999e-407b-a802-8acc306a4608" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="bdf18f1b-7db4-4362-8015-1108b469271f" name="Divide" description="Divides two numeric values.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Divide">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="91a79cbf-e35f-46c6-aa28-a1e075bcf57e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="4a59ee30-65c8-4691-8afa-2f37a72754de" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="({0} / {1})" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="91a79cbf-e35f-46c6-aa28-a1e075bcf57e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="4a59ee30-65c8-4691-8afa-2f37a72754de" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="10356fea-1d68-460a-a53a-f103fcf28ad5" name="Day" description="Returns the day of the month from the specified datetime, a number from 1 to 31.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Day">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="0b0451d0-999e-407b-a802-8acc306a4608" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="day from {0}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="0b0451d0-999e-407b-a802-8acc306a4608" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="07d291d4-8d9e-4ade-9b3c-4797885fedae" name="Power" description="Returns the result of a number raised to a power.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Power">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="91a79cbf-e35f-46c6-aa28-a1e075bcf57e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="4a59ee30-65c8-4691-8afa-2f37a72754de" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="({0} ^ {1})" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="91a79cbf-e35f-46c6-aa28-a1e075bcf57e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="4a59ee30-65c8-4691-8afa-2f37a72754de" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="c41798aa-b028-4a9c-9c00-0e591ddceaf5" name="Second" description="Returns the second from the specified datetime, a number from 0 to 59.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Second">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="0b0451d0-999e-407b-a802-8acc306a4608" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="second from {0}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="0b0451d0-999e-407b-a802-8acc306a4608" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="7ee77631-e9ad-472b-a360-fe73af440c1f" name="Multiply" description="Multiplies two numeric values.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Multiply">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="91a79cbf-e35f-46c6-aa28-a1e075bcf57e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="4a59ee30-65c8-4691-8afa-2f37a72754de" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="({0} * {1})" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="91a79cbf-e35f-46c6-aa28-a1e075bcf57e" />
+        </argument>
+        <argument position="1">
+          <valuedefinitionlink vocabulary="cfded0c3-02bc-4403-ae44-ffdeeb2297d8" definition="4a59ee30-65c8-4691-8afa-2f37a72754de" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="b8d475d6-c1cd-46d1-bd44-5b91f2ac4eee" name="Halt" description="Halts the current rule engine execution and optionally clears all rule firings.">
+      <engineoperationdefinition type="Microsoft.RuleEngine.Halt">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="5e19cad8-b5f1-4f77-93fd-5210c3e45394" definition="b28191b6-5401-4782-a1a4-627df6369743" />
+        </argument>
+      </engineoperationdefinition>
+      <formatstring language="" string="halt and {0}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionlink vocabulary="5e19cad8-b5f1-4f77-93fd-5210c3e45394" definition="b28191b6-5401-4782-a1a4-627df6369743" />
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+  </vocabulary>
+  <ruleset name="CalculaDescontos">
+    <version major="1" minor="3" description="" modifiedby="SP\Rui" date="2006-06-04T20:30:41.796875+01:00" />
+    <configuration />
+    <bindings>
+      <xmldocument ref="xml_32" doctype="WEBooksBiztalk.WEBooksNYT.Reference.ArrayOfDesconto" instances="16" selectivity="1" instance="0">
+        <selector>/*[local-name()='ArrayOfDesconto' and namespace-uri()='http://WEBooksNY.pt/']/*[local-name()='Desconto' and namespace-uri()='http://WEBooksNY.pt/']</selector>
+        <selectoralias>/tns:ArrayOfDesconto/tns:Desconto</selectoralias>
+        <schema>C:\Workspace\WEBooks\WEBooksBiztalk\Web References\WEBooksNYT\Reference.xsd</schema>
+      </xmldocument>
+      <xmldocument ref="xml_31" doctype="WEBooksBiztalk.WEBooksBiztalkSchema.Books" instances="16" selectivity="1" instance="0">
+        <selector>/*[local-name()='Books' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']/*[local-name()='Book' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</selector>
+        <selectoralias>/tns:Books/tns:Book</selectoralias>
+        <schema>C:\Workspace\WEBooks\WEBooksBiztalk\WEBooksBiztalkSchema.xsd</schema>
+      </xmldocument>
+    </bindings>
+    <rule name="DescontoNYTBarnes" priority="0" active="true">
+      <if>
+        <and>
+          <compare operator="equal">
+            <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="05703dd9-1111-40b8-890d-ad7bfc45a925" />
+            <lhs>
+              <function>
+                <xmldocumentmember xmldocumentref="xml_31" type="string" sideeffects="false">
+                  <field>*[local-name()='Titulo' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                  <fieldalias>tns:Titulo</fieldalias>
+                </xmldocumentmember>
+              </function>
+            </lhs>
+            <rhs>
+              <function>
+                <xmldocumentmember xmldocumentref="xml_32" type="string" sideeffects="false">
+                  <field>*[local-name()='Titulo' and namespace-uri()='http://WEBooksNY.pt/']</field>
+                  <fieldalias>tns:Titulo</fieldalias>
+                </xmldocumentmember>
+              </function>
+            </rhs>
+          </compare>
+          <predicate>
+            <xmldocumentmember xmldocumentref="xml_32" type="boolean" sideeffects="false">
+              <field>*[local-name()='ComDesconto' and namespace-uri()='http://WEBooksNY.pt/']</field>
+              <fieldalias>tns:ComDesconto</fieldalias>
+            </xmldocumentmember>
+          </predicate>
+          <compare operator="equal">
+            <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="05703dd9-1111-40b8-890d-ad7bfc45a925" />
+            <lhs>
+              <constant>
+                <string>Barnes&amp;Noble</string>
+              </constant>
+            </lhs>
+            <rhs>
+              <function>
+                <xmldocumentmember xmldocumentref="xml_31" type="string" sideeffects="false">
+                  <field>*[local-name()='Fornecedor' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                  <fieldalias>tns:Fornecedor</fieldalias>
+                </xmldocumentmember>
+              </function>
+            </rhs>
+          </compare>
+        </and>
+      </if>
+      <then>
+        <function>
+          <xmldocumentmember xmldocumentref="xml_31" type="boolean" sideeffects="true">
+            <field>*[local-name()='TemDesconto' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+            <fieldalias>tns:TemDesconto</fieldalias>
+            <argument>
+              <constant>
+                <boolean>true</boolean>
+              </constant>
+            </argument>
+          </xmldocumentmember>
+        </function>
+        <function>
+          <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="true">
+            <field>*[local-name()='Desconto' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+            <fieldalias>tns:Desconto</fieldalias>
+            <argument>
+              <arithmetic operator="add">
+                <vocabularylink uri="aee857f2-09d5-4615-a96c-87041791ec42" element="e49242c4-4f9c-42a5-b382-6c510652a75e" />
+                <lhs>
+                  <arithmetic operator="multiply">
+                    <vocabularylink uri="aee857f2-09d5-4615-a96c-87041791ec42" element="7ee77631-e9ad-472b-a360-fe73af440c1f" />
+                    <lhs>
+                      <constant>
+                        <double>0.15</double>
+                      </constant>
+                    </lhs>
+                    <rhs>
+                      <function>
+                        <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="false">
+                          <field>*[local-name()='Preco' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                          <fieldalias>tns:Preco</fieldalias>
+                        </xmldocumentmember>
+                      </function>
+                    </rhs>
+                  </arithmetic>
+                </lhs>
+                <rhs>
+                  <function>
+                    <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="false">
+                      <field>*[local-name()='Desconto' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                      <fieldalias>tns:Desconto</fieldalias>
+                    </xmldocumentmember>
+                  </function>
+                </rhs>
+              </arithmetic>
+            </argument>
+          </xmldocumentmember>
+        </function>
+      </then>
+    </rule>
+    <rule name="DescontoNYTAmazon" priority="0" active="true">
+      <if>
+        <and>
+          <compare operator="equal">
+            <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="05703dd9-1111-40b8-890d-ad7bfc45a925" />
+            <lhs>
+              <constant>
+                <string>Amazon</string>
+              </constant>
+            </lhs>
+            <rhs>
+              <function>
+                <xmldocumentmember xmldocumentref="xml_31" type="string" sideeffects="false">
+                  <field>*[local-name()='Fornecedor' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                  <fieldalias>tns:Fornecedor</fieldalias>
+                </xmldocumentmember>
+              </function>
+            </rhs>
+          </compare>
+          <compare operator="equal">
+            <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="05703dd9-1111-40b8-890d-ad7bfc45a925" />
+            <lhs>
+              <function>
+                <xmldocumentmember xmldocumentref="xml_31" type="string" sideeffects="false">
+                  <field>*[local-name()='Titulo' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                  <fieldalias>tns:Titulo</fieldalias>
+                </xmldocumentmember>
+              </function>
+            </lhs>
+            <rhs>
+              <function>
+                <xmldocumentmember xmldocumentref="xml_32" type="string" sideeffects="false">
+                  <field>*[local-name()='Titulo' and namespace-uri()='http://WEBooksNY.pt/']</field>
+                  <fieldalias>tns:Titulo</fieldalias>
+                </xmldocumentmember>
+              </function>
+            </rhs>
+          </compare>
+          <predicate>
+            <xmldocumentmember xmldocumentref="xml_32" type="boolean" sideeffects="false">
+              <field>*[local-name()='ComDesconto' and namespace-uri()='http://WEBooksNY.pt/']</field>
+              <fieldalias>tns:ComDesconto</fieldalias>
+            </xmldocumentmember>
+          </predicate>
+        </and>
+      </if>
+      <then>
+        <function>
+          <xmldocumentmember xmldocumentref="xml_31" type="boolean" sideeffects="true">
+            <field>*[local-name()='TemDesconto' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+            <fieldalias>tns:TemDesconto</fieldalias>
+            <argument>
+              <constant>
+                <boolean>true</boolean>
+              </constant>
+            </argument>
+          </xmldocumentmember>
+        </function>
+        <function>
+          <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="true">
+            <field>*[local-name()='Desconto' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+            <fieldalias>tns:Desconto</fieldalias>
+            <argument>
+              <arithmetic operator="add">
+                <vocabularylink uri="aee857f2-09d5-4615-a96c-87041791ec42" element="e49242c4-4f9c-42a5-b382-6c510652a75e" />
+                <lhs>
+                  <arithmetic operator="multiply">
+                    <vocabularylink uri="aee857f2-09d5-4615-a96c-87041791ec42" element="7ee77631-e9ad-472b-a360-fe73af440c1f" />
+                    <lhs>
+                      <constant>
+                        <double>0.05</double>
+                      </constant>
+                    </lhs>
+                    <rhs>
+                      <function>
+                        <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="false">
+                          <field>*[local-name()='Preco' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                          <fieldalias>tns:Preco</fieldalias>
+                        </xmldocumentmember>
+                      </function>
+                    </rhs>
+                  </arithmetic>
+                </lhs>
+                <rhs>
+                  <function>
+                    <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="false">
+                      <field>*[local-name()='Desconto' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                      <fieldalias>tns:Desconto</fieldalias>
+                    </xmldocumentmember>
+                  </function>
+                </rhs>
+              </arithmetic>
+            </argument>
+          </xmldocumentmember>
+        </function>
+      </then>
+    </rule>
+    <rule name="DescontoAmazon" priority="0" active="true">
+      <if>
+        <and>
+          <not>
+            <match>
+              <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="949cabdb-16a5-42cf-a80d-e45fec6d0a62" />
+              <pattern>
+                <constant>
+                  <string>Programming, Computers &amp; Internet</string>
+                </constant>
+              </pattern>
+              <input>
+                <function>
+                  <xmldocumentmember xmldocumentref="xml_31" type="string" sideeffects="false">
+                    <field>*[local-name()='Categoria' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                    <fieldalias>tns:Categoria</fieldalias>
+                  </xmldocumentmember>
+                </function>
+              </input>
+            </match>
+          </not>
+          <compare operator="equal">
+            <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="05703dd9-1111-40b8-890d-ad7bfc45a925" />
+            <lhs>
+              <constant>
+                <string>Amazon</string>
+              </constant>
+            </lhs>
+            <rhs>
+              <function>
+                <xmldocumentmember xmldocumentref="xml_31" type="string" sideeffects="false">
+                  <field>*[local-name()='Fornecedor' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                  <fieldalias>tns:Fornecedor</fieldalias>
+                </xmldocumentmember>
+              </function>
+            </rhs>
+          </compare>
+        </and>
+      </if>
+      <then>
+        <function>
+          <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="true">
+            <field>*[local-name()='Desconto' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+            <fieldalias>tns:Desconto</fieldalias>
+            <argument>
+              <arithmetic operator="add">
+                <vocabularylink uri="aee857f2-09d5-4615-a96c-87041791ec42" element="e49242c4-4f9c-42a5-b382-6c510652a75e" />
+                <lhs>
+                  <arithmetic operator="multiply">
+                    <vocabularylink uri="aee857f2-09d5-4615-a96c-87041791ec42" element="7ee77631-e9ad-472b-a360-fe73af440c1f" />
+                    <lhs>
+                      <constant>
+                        <double>0.05</double>
+                      </constant>
+                    </lhs>
+                    <rhs>
+                      <function>
+                        <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="false">
+                          <field>*[local-name()='Preco' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                          <fieldalias>tns:Preco</fieldalias>
+                        </xmldocumentmember>
+                      </function>
+                    </rhs>
+                  </arithmetic>
+                </lhs>
+                <rhs>
+                  <function>
+                    <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="false">
+                      <field>*[local-name()='Desconto' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                      <fieldalias>tns:Desconto</fieldalias>
+                    </xmldocumentmember>
+                  </function>
+                </rhs>
+              </arithmetic>
+            </argument>
+          </xmldocumentmember>
+        </function>
+      </then>
+    </rule>
+    <rule name="DescontoCategoriaAmazon" priority="0" active="true">
+      <if>
+        <and>
+          <match>
+            <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="949cabdb-16a5-42cf-a80d-e45fec6d0a62" />
+            <pattern>
+              <constant>
+                <string>Programming, Computers &amp; Internet</string>
+              </constant>
+            </pattern>
+            <input>
+              <function>
+                <xmldocumentmember xmldocumentref="xml_31" type="string" sideeffects="false">
+                  <field>*[local-name()='Categoria' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                  <fieldalias>tns:Categoria</fieldalias>
+                </xmldocumentmember>
+              </function>
+            </input>
+          </match>
+          <compare operator="equal">
+            <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="05703dd9-1111-40b8-890d-ad7bfc45a925" />
+            <lhs>
+              <constant>
+                <string>Amazon</string>
+              </constant>
+            </lhs>
+            <rhs>
+              <function>
+                <xmldocumentmember xmldocumentref="xml_31" type="string" sideeffects="false">
+                  <field>*[local-name()='Fornecedor' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                  <fieldalias>tns:Fornecedor</fieldalias>
+                </xmldocumentmember>
+              </function>
+            </rhs>
+          </compare>
+        </and>
+      </if>
+      <then>
+        <function>
+          <xmldocumentmember xmldocumentref="xml_31" type="boolean" sideeffects="true">
+            <field>*[local-name()='TemDesconto' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+            <fieldalias>tns:TemDesconto</fieldalias>
+            <argument>
+              <constant>
+                <boolean>true</boolean>
+              </constant>
+            </argument>
+          </xmldocumentmember>
+        </function>
+        <function>
+          <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="true">
+            <field>*[local-name()='Desconto' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+            <fieldalias>tns:Desconto</fieldalias>
+            <argument>
+              <arithmetic operator="add">
+                <vocabularylink uri="aee857f2-09d5-4615-a96c-87041791ec42" element="e49242c4-4f9c-42a5-b382-6c510652a75e" />
+                <lhs>
+                  <arithmetic operator="multiply">
+                    <vocabularylink uri="aee857f2-09d5-4615-a96c-87041791ec42" element="7ee77631-e9ad-472b-a360-fe73af440c1f" />
+                    <lhs>
+                      <constant>
+                        <double>0.1</double>
+                      </constant>
+                    </lhs>
+                    <rhs>
+                      <function>
+                        <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="false">
+                          <field>*[local-name()='Preco' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                          <fieldalias>tns:Preco</fieldalias>
+                        </xmldocumentmember>
+                      </function>
+                    </rhs>
+                  </arithmetic>
+                </lhs>
+                <rhs>
+                  <function>
+                    <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="false">
+                      <field>*[local-name()='Desconto' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                      <fieldalias>tns:Desconto</fieldalias>
+                    </xmldocumentmember>
+                  </function>
+                </rhs>
+              </arithmetic>
+            </argument>
+          </xmldocumentmember>
+        </function>
+      </then>
+    </rule>
+    <rule name="DescontoBarnes" priority="0" active="true">
+      <if>
+        <compare operator="equal">
+          <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="05703dd9-1111-40b8-890d-ad7bfc45a925" />
+          <lhs>
+            <constant>
+              <string>Barnes&amp;Noble</string>
+            </constant>
+          </lhs>
+          <rhs>
+            <function>
+              <xmldocumentmember xmldocumentref="xml_31" type="string" sideeffects="false">
+                <field>*[local-name()='Fornecedor' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                <fieldalias>tns:Fornecedor</fieldalias>
+              </xmldocumentmember>
+            </function>
+          </rhs>
+        </compare>
+      </if>
+      <then>
+        <function>
+          <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="true">
+            <field>*[local-name()='Desconto' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+            <fieldalias>tns:Desconto</fieldalias>
+            <argument>
+              <arithmetic operator="add">
+                <vocabularylink uri="aee857f2-09d5-4615-a96c-87041791ec42" element="e49242c4-4f9c-42a5-b382-6c510652a75e" />
+                <lhs>
+                  <arithmetic operator="multiply">
+                    <vocabularylink uri="aee857f2-09d5-4615-a96c-87041791ec42" element="7ee77631-e9ad-472b-a360-fe73af440c1f" />
+                    <lhs>
+                      <constant>
+                        <double>0.05</double>
+                      </constant>
+                    </lhs>
+                    <rhs>
+                      <function>
+                        <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="false">
+                          <field>*[local-name()='Preco' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                          <fieldalias>tns:Preco</fieldalias>
+                        </xmldocumentmember>
+                      </function>
+                    </rhs>
+                  </arithmetic>
+                </lhs>
+                <rhs>
+                  <function>
+                    <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="false">
+                      <field>*[local-name()='Desconto' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                      <fieldalias>tns:Desconto</fieldalias>
+                    </xmldocumentmember>
+                  </function>
+                </rhs>
+              </arithmetic>
+            </argument>
+          </xmldocumentmember>
+        </function>
+      </then>
+    </rule>
+  </ruleset>
+  <ruleset name="CalculaPrecos">
+    <version major="1" minor="1" description="" modifiedby="SP\Rui" date="2006-06-04T20:24:42.375+01:00" />
+    <configuration />
+    <bindings>
+      <xmldocument ref="xml_31" doctype="WEBooksBiztalk.WEBooksBiztalkSchema.Books" instances="16" selectivity="1" instance="0">
+        <selector>/*[local-name()='Books' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']/*[local-name()='Book' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</selector>
+        <selectoralias>/tns:Books/tns:Book</selectoralias>
+        <schema>C:\Workspace\WEBooks\WEBooksBiztalk\WEBooksBiztalkSchema.xsd</schema>
+      </xmldocument>
+    </bindings>
+    <rule name="PrecoCategoriaAmazon" priority="0" active="true">
+      <if>
+        <and>
+          <compare operator="equal">
+            <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="05703dd9-1111-40b8-890d-ad7bfc45a925" />
+            <lhs>
+              <constant>
+                <string>Amazon</string>
+              </constant>
+            </lhs>
+            <rhs>
+              <function>
+                <xmldocumentmember xmldocumentref="xml_31" type="string" sideeffects="false">
+                  <field>*[local-name()='Fornecedor' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                  <fieldalias>tns:Fornecedor</fieldalias>
+                </xmldocumentmember>
+              </function>
+            </rhs>
+          </compare>
+          <match>
+            <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="949cabdb-16a5-42cf-a80d-e45fec6d0a62" />
+            <pattern>
+              <constant>
+                <string>Programming, Computers &amp; Internet</string>
+              </constant>
+            </pattern>
+            <input>
+              <function>
+                <xmldocumentmember xmldocumentref="xml_31" type="string" sideeffects="false">
+                  <field>*[local-name()='Categoria' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                  <fieldalias>tns:Categoria</fieldalias>
+                </xmldocumentmember>
+              </function>
+            </input>
+          </match>
+        </and>
+      </if>
+      <then>
+        <function>
+          <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="true">
+            <field>*[local-name()='PrecoVenda' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+            <fieldalias>tns:PrecoVenda</fieldalias>
+            <argument>
+              <arithmetic operator="multiply">
+                <vocabularylink uri="aee857f2-09d5-4615-a96c-87041791ec42" element="7ee77631-e9ad-472b-a360-fe73af440c1f" />
+                <lhs>
+                  <constant>
+                    <double>1.05</double>
+                  </constant>
+                </lhs>
+                <rhs>
+                  <arithmetic operator="subtract">
+                    <vocabularylink uri="aee857f2-09d5-4615-a96c-87041791ec42" element="5a5040a5-2bf2-4016-bda1-f46d2d7e637b" />
+                    <lhs>
+                      <function>
+                        <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="false">
+                          <field>*[local-name()='Preco' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                          <fieldalias>tns:Preco</fieldalias>
+                        </xmldocumentmember>
+                      </function>
+                    </lhs>
+                    <rhs>
+                      <function>
+                        <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="false">
+                          <field>*[local-name()='Desconto' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                          <fieldalias>tns:Desconto</fieldalias>
+                        </xmldocumentmember>
+                      </function>
+                    </rhs>
+                  </arithmetic>
+                </rhs>
+              </arithmetic>
+            </argument>
+          </xmldocumentmember>
+        </function>
+      </then>
+    </rule>
+    <rule name="PrecoAmazon" priority="0" active="true">
+      <if>
+        <and>
+          <not>
+            <match>
+              <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="949cabdb-16a5-42cf-a80d-e45fec6d0a62" />
+              <pattern>
+                <constant>
+                  <string>Programming, Computers &amp; Internet</string>
+                </constant>
+              </pattern>
+              <input>
+                <function>
+                  <xmldocumentmember xmldocumentref="xml_31" type="string" sideeffects="false">
+                    <field>*[local-name()='Categoria' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                    <fieldalias>tns:Categoria</fieldalias>
+                  </xmldocumentmember>
+                </function>
+              </input>
+            </match>
+          </not>
+          <compare operator="equal">
+            <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="05703dd9-1111-40b8-890d-ad7bfc45a925" />
+            <lhs>
+              <constant>
+                <string>Amazon</string>
+              </constant>
+            </lhs>
+            <rhs>
+              <function>
+                <xmldocumentmember xmldocumentref="xml_31" type="string" sideeffects="false">
+                  <field>*[local-name()='Fornecedor' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                  <fieldalias>tns:Fornecedor</fieldalias>
+                </xmldocumentmember>
+              </function>
+            </rhs>
+          </compare>
+        </and>
+      </if>
+      <then>
+        <function>
+          <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="true">
+            <field>*[local-name()='PrecoVenda' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+            <fieldalias>tns:PrecoVenda</fieldalias>
+            <argument>
+              <arithmetic operator="multiply">
+                <vocabularylink uri="aee857f2-09d5-4615-a96c-87041791ec42" element="7ee77631-e9ad-472b-a360-fe73af440c1f" />
+                <lhs>
+                  <constant>
+                    <double>1.02</double>
+                  </constant>
+                </lhs>
+                <rhs>
+                  <arithmetic operator="subtract">
+                    <vocabularylink uri="aee857f2-09d5-4615-a96c-87041791ec42" element="5a5040a5-2bf2-4016-bda1-f46d2d7e637b" />
+                    <lhs>
+                      <function>
+                        <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="false">
+                          <field>*[local-name()='Preco' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                          <fieldalias>tns:Preco</fieldalias>
+                        </xmldocumentmember>
+                      </function>
+                    </lhs>
+                    <rhs>
+                      <function>
+                        <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="false">
+                          <field>*[local-name()='Desconto' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                          <fieldalias>tns:Desconto</fieldalias>
+                        </xmldocumentmember>
+                      </function>
+                    </rhs>
+                  </arithmetic>
+                </rhs>
+              </arithmetic>
+            </argument>
+          </xmldocumentmember>
+        </function>
+      </then>
+    </rule>
+    <rule name="PrecoBarnes" priority="0" active="true">
+      <if>
+        <compare operator="equal">
+          <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="05703dd9-1111-40b8-890d-ad7bfc45a925" />
+          <lhs>
+            <constant>
+              <string>Barnes&amp;Noble</string>
+            </constant>
+          </lhs>
+          <rhs>
+            <function>
+              <xmldocumentmember xmldocumentref="xml_31" type="string" sideeffects="false">
+                <field>*[local-name()='Fornecedor' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                <fieldalias>tns:Fornecedor</fieldalias>
+              </xmldocumentmember>
+            </function>
+          </rhs>
+        </compare>
+      </if>
+      <then>
+        <function>
+          <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="true">
+            <field>*[local-name()='PrecoVenda' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+            <fieldalias>tns:PrecoVenda</fieldalias>
+            <argument>
+              <arithmetic operator="multiply">
+                <vocabularylink uri="aee857f2-09d5-4615-a96c-87041791ec42" element="7ee77631-e9ad-472b-a360-fe73af440c1f" />
+                <lhs>
+                  <constant>
+                    <double>1.02</double>
+                  </constant>
+                </lhs>
+                <rhs>
+                  <arithmetic operator="subtract">
+                    <vocabularylink uri="aee857f2-09d5-4615-a96c-87041791ec42" element="5a5040a5-2bf2-4016-bda1-f46d2d7e637b" />
+                    <lhs>
+                      <function>
+                        <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="false">
+                          <field>*[local-name()='Preco' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                          <fieldalias>tns:Preco</fieldalias>
+                        </xmldocumentmember>
+                      </function>
+                    </lhs>
+                    <rhs>
+                      <function>
+                        <xmldocumentmember xmldocumentref="xml_31" type="double" sideeffects="false">
+                          <field>*[local-name()='Desconto' and namespace-uri()='http://www.WEBooks.pt/WEBooksBiztalk']</field>
+                          <fieldalias>tns:Desconto</fieldalias>
+                        </xmldocumentmember>
+                      </function>
+                    </rhs>
+                  </arithmetic>
+                </rhs>
+              </arithmetic>
+            </argument>
+          </xmldocumentmember>
+        </function>
+      </then>
+    </rule>
+  </ruleset>
+</brl>

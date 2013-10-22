@@ -1,0 +1,195 @@
+public int InsereCliente(int idCliente, string nome, string username, string password, string telefone, string address, 
+                                string city, string state, string ZIPcode, string country, string numCartaoCredito, 
+                                string dataValidadeCartaoValidade)
+    {
+        string query = "UPDATE Cliente" +
+                        " SET " +                            
+                             "nome = " + idCliente +
+                             ", username = " + username +
+                             ", password = " + password +
+                             ", telefone = " + telefone +
+                             ", address = " + address+
+                             ", city = " + city +
+                             ", state = " + state +
+                             ", ZIPcode = " + ZIPcode +
+                             ", country = " + country +
+                             ", numCartaoCredito = " + numCartaoCredito+
+                             ", dataValidadeCartaoValidade = " + dataValidadeCartaoValidade + 
+                         "WHERE" +
+                             "idCliente = " + idCliente;
+
+        int i = invocaQuery(query);
+
+        return i;
+    }
+    
+    
+    /*
+        protected void bt_registo_Click(object sender, EventArgs e)
+        {        
+            OdbcConnection ligacao;
+            OdbcCommand comando;
+
+            if (!verifica_password()) {
+                return;
+            }
+
+
+            string nome = tb_nome.Text;
+            string username = tb_username.Text;
+            string password = tb_password.Text;
+            string rua = tb_rua.Text;
+            string numero = tb_numero.Text;
+            string localidade = tb_localidade.Text;
+            string codigo_postal = tb_codigo_postal.Text;
+
+            string query_cliente = "INSERT INTO Cliente(id_cliente, nome, username, password, id_morada) " +
+                                    "values('1',"+
+                                    nome +"','"+
+                                    username + "','" +
+                                    password + "','" +
+                                    "'4')";
+            string query_morada = "INSERT INTO Morada(id_morada, rua, numero, localidade, codigo_postal)" +
+                                "VALUES"+
+                               "('3','" +
+                               rua + "','" +
+                               numero + "','" +
+                               localidade + "','" +
+                               codigo_postal + "')";
+
+            ligacao = new OdbcConnection("Driver={SQL Server};Server=CASEIRO;Integrated Security=SSPI;Database=WEBooks;");
+
+            //Inserir MORADA
+            comando = new OdbcCommand(query_morada ,ligacao);       
+            try
+            {
+                ligacao.Open();
+
+                int i = comando.ExecuteNonQuery();
+            
+                this.lb_info.Text = i + "\r\n";
+            }
+            catch (OdbcException ex)
+            {
+                this.lb_info.Text += ex.Message;
+            }
+            finally
+            {
+                ligacao.Close();           
+            }
+            this.lb_info.Text += "inserido morada \r\n";
+
+    //Inserir CLIENTE
+            comando = new OdbcCommand(query_morada, ligacao);
+            try
+            {
+                ligacao.Open();
+
+                int i = comando.ExecuteNonQuery();
+
+                this.lb_info.Text += i + "\r\n";
+            }
+            catch (OdbcException ex)
+            {
+                this.lb_info.Text += ex.Message;
+            }
+            finally
+            {
+                ligacao.Close();
+            }
+            this.lb_info.Text += "inserido cliente\r\n";
+
+            lb_info.Text = "Nome: " + nome +
+                            "\r\nusername: " + username +
+                            "MORADA\r\n" +
+                            "\r\nrua: " + rua +
+                            "\r\nnumero: " + numero +
+                            "\r\nlocalidade: " + localidade +
+                            "\r\ncodigo postal: " + codigo_postal;
+        }    
+
+        protected Boolean verifica_password()
+        {
+            if (!tb_password.Text.Equals(tb_confirmar.Text)) {
+                lb_verificacao_password.Text = "Incorrecto";
+                return false;
+            }else{
+                lb_verificacao_password.Text = "Correcto";
+                return true;
+            }
+        } 
+     */
+     
+     
+     string query = "SELECT Livro.idLivro, Livro.ISBN, Livro.titulo, Livro.categoria, Livro.autores, " +
+                                " Livro.editora, Livro.anoEdicao, Livro.precoVenda, Livro.precoSemDesconto, Livro.urlImagem, " +
+                                " Livro.tempoEntrega, Livro.desconto, Livro.top5, Livro.estadoConservacao," +
+                                " Livro.nomeFornecedor, Livro.numPesquisas, Carrinho.quantidade " +
+                        " FROM Livro, Carrinho, Cliente " +
+                        " WHERE " +
+                            "Cliente.username = '" + username + "' " +
+                            "AND Cliente.idCliente = Carrinho.idCliente " +
+                            "AND Carrinho.idLivro = Livro.idLivro";
+                            
+                            
+      /*   int i = 0;
+
+               ligacao = new SqlConnection(sqlLigacao);
+               ligacao.Open();
+
+               SqlTransaction transacao = ligacao.BeginTransaction();
+
+               SqlCommand comando = new SqlCommand();
+
+               comando.Transaction = transacao;
+        
+              // transaction = ligacao.BeginTransaction();
+               try 
+               {
+
+                  // SqlCommand comando = ligacao.CreateCommand();
+
+                  // new SqlCommand(query, ligacao, transaction).ExecuteNonQuery();
+
+                   comando.CommandText = query;
+
+                   i = comando.ExecuteNonQuery();
+
+                   transaction.Commit();
+               }
+               catch (SqlException sqlError)
+               {
+                  transaction.Rollback();
+               }
+
+               ligacao.Close();
+               */
+               
+               
+               
+               ligacao = new SqlConnection(sqlLigacao);
+        ligacao.Open();
+
+        SqlTransaction transacao = ligacao.BeginTransaction();
+        SqlDataReader resposta = null;
+
+        
+
+        SqlCommand comando = new SqlCommand();
+        comando.CommandText = query;
+        comando.Transaction = transacao;
+        comando.Connection = ligacao;
+        comando.
+        
+        try 
+        {
+            resposta = comando.ExecuteReader();
+
+            transacao.Commit();
+        }
+        catch (SqlException sqlError)
+        {
+            transacao.Rollback();
+        }
+
+        return resposta;

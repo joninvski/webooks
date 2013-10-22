@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://WEBooksGeocoder.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://WEBooksGeocoder.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://WEBooksGeocoder.org/">
+      <s:element name="GeoCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rua" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cidade" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GeoCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GeoCodeResult" type="tns:CoordGeo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CoordGeo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Latitude" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Longitude" type="s:float" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GeoCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GeoCode" />
+  </wsdl:message>
+  <wsdl:message name="GeoCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GeoCodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WEBooksGeoCoderSoap">
+    <wsdl:operation name="GeoCode">
+      <wsdl:input message="tns:GeoCodeSoapIn" />
+      <wsdl:output message="tns:GeoCodeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WEBooksGeoCoderSoap" type="tns:WEBooksGeoCoderSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GeoCode">
+      <soap:operation soapAction="http://WEBooksGeocoder.org/GeoCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WEBooksGeoCoderSoap12" type="tns:WEBooksGeoCoderSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GeoCode">
+      <soap12:operation soapAction="http://WEBooksGeocoder.org/GeoCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WEBooksGeoCoder">
+    <wsdl:port name="WEBooksGeoCoderSoap" binding="tns:WEBooksGeoCoderSoap">
+      <soap:address location="http://sp/WEBooksGeoCoder/WEBooksGeoCoder.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WEBooksGeoCoderSoap12" binding="tns:WEBooksGeoCoderSoap12">
+      <soap12:address location="http://sp/WEBooksGeoCoder/WEBooksGeoCoder.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

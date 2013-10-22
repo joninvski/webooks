@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:tns="http://WEBooksNY.pt/" elementFormDefault="qualified" targetNamespace="http://WEBooksNY.pt/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ArrayOfLivroPromocao" nillable="true" type="tns:ArrayOfLivroPromocao" />
+  <xs:complexType name="ArrayOfLivroPromocao">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LivroPromocao" nillable="true" type="tns:LivroPromocao" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LivroPromocao">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="TipoCapa" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Titulo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NomeAutor" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDesconto" nillable="true" type="tns:ArrayOfDesconto" />
+  <xs:complexType name="ArrayOfDesconto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Desconto" nillable="true" type="tns:Desconto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Desconto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Titulo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TipoCapa" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ComDesconto" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LivroPromocao" nillable="true" type="tns:LivroPromocao" />
+  <xs:element name="Desconto" nillable="true" type="tns:Desconto" />
+</xs:schema>

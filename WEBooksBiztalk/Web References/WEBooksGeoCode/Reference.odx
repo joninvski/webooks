@@ -1,0 +1,100 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="6ba01ed7-5fcc-4afd-ac4e-0e5f198ef4c3" LowerBound="1.1" HigherBound="28.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="WEBooksBiztalk.WEBooksGeoCode.WEBooksGeoCoder_" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="MethodMessageType" OID="00000000-0000-0000-0000-000000000000" ParentLink="Module_MessageType">
+            <om:Property Name="Url" Value="http://sp/WEBooksGeoCoder/WEBooksGeoCoder.asmx" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="WEBooksBiztalk.WEBooksGeoCode.WEBooksGeoCoder" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MethodMessageOperation" OID="d689d199-26fd-42f1-b925-19b539a058d5" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="GeoCode" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="GeoCode_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="c8b02a5f-2a0b-4025-b937-7874f54e9b27" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="numero" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="030b0fb4-1cd1-46d9-be72-0b91a8657816" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="zip" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="2c14c771-a67a-495b-b6b1-6073a7de7dce" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="rua" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="3db70292-f8ff-45a2-a5d0-e548dd18589c" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="estado" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="087939d3-f313-474e-b8ea-55d02d6f5729" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="cidade" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="d470f886-afb7-4c20-bc2f-3ac2ec9b31d8" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="GeoCode" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="GeoCode_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="f6e96beb-cf2f-4394-b810-6858927fd8ea" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksGeoCode.Reference" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="GeoCodeResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="TargetXMLNamespaceAttribute" OID="db1310ae-1c55-4cfb-9e01-0d12d850d9e3" ParentLink="Module_CLRAttribute" LowerBound="2.1" HigherBound="3.1">
+            <om:Property Name="TargetXMLNamespace" Value="http://WEBooksGeocoder.org/" />
+            <om:Property Name="Signal" Value="False" />
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(true)]
+[Microsoft.XLANGs.BaseTypes.TargetXmlNamespaceAttribute("http://WEBooksGeocoder.org/")]
+module WEBooksBiztalk.WEBooksGeoCode.WEBooksGeoCoder_
+{
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksGeoCode.WEBooksGeoCoder), "GeoCode", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype GeoCode_request
+    {
+        body System.String numero;
+        System.String zip;
+        System.String rua;
+        System.String estado;
+        System.String cidade;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksGeoCode.WEBooksGeoCoder), "GeoCode", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype GeoCode_response
+    {
+        body WEBooksBiztalk.WEBooksGeoCode.Reference GeoCodeResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WSDLProxyName(typeof(WEBooksBiztalk.WEBooksGeoCode.WEBooksGeoCoder))]
+    public porttype WEBooksGeoCoder
+    {
+        requestresponse GeoCode
+        {
+            WEBooksBiztalk.WEBooksGeoCode.WEBooksGeoCoder_.GeoCode_request, WEBooksBiztalk.WEBooksGeoCode.WEBooksGeoCoder_.GeoCode_response
+        };
+    };
+}
+

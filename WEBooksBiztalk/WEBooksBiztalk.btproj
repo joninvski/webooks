@@ -1,0 +1,404 @@
+﻿<VisualStudioProject>
+    <BIZTALK
+        ProductVersion = "3.5.1409"
+        SchemaVersion = "1.0"
+        ProjectGuid = "{9F225B48-2BE7-46D4-82AC-4DD090B0F9E3}"
+    >
+        <Build>
+            <Settings>
+                <EditorCommon/>
+                <ProjectCommon
+                    AssemblyKeyName = ""
+                    AssemblyKeyFile = "..\..\..\WEBooksBiztalk.snk"
+                    AssemblyDelaySign = "False"
+                    AssemblyTitle = ""
+                    AssemblyDescription = ""
+                    AssemblyDefaultAlias = ""
+                    AssemblyConfiguration = ""
+                    AssemblyTrademark = ""
+                    AssemblyProduct = ""
+                    AssemblyInformationalVersion = "1.0.0.0"
+                    AssemblyFileVersion = "1.0.0.0"
+                    AssemblyCopyright = ""
+                    AssemblyCompany = ""
+                    AssemblyVersion = "1.0.0.0"
+                    DefaultNamespace = "WEBooksBiztalk"
+                    AssemblyName = "WEBooksBiztalk"
+                />
+                <Config
+                    Name = "Development"
+                    ApplicationName = "WEBooksBiztalk"
+                    BpelCompliance = "True"
+                    GenerateDebuggingInformation = "True"
+                    EmbedTrackingInformation = "True"
+                    TreatWarningsAsErrors = "False"
+                    WarningLevel = "4"
+                    OutputPath = "bin\Development\"
+                />
+                <Config
+                    Name = "Deployment"
+                    ApplicationName = "WEBooksBiztalk"
+                    BpelCompliance = "True"
+                    GenerateDebuggingInformation = "False"
+                    EmbedTrackingInformation = "True"
+                    TreatWarningsAsErrors = "False"
+                    WarningLevel = "4"
+                    OutputPath = "bin\Deployment\"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Web.Services.dll"
+                />
+                <Reference
+                    Name = "Microsoft.BizTalk.DefaultPipelines"
+                    AssemblyName = "Microsoft.BizTalk.DefaultPipelines"
+                    HintPath = "..\..\..\Development\Microsoft BizTalk Server 2006\Microsoft.BizTalk.DefaultPipelines.dll"
+                />
+                <Reference
+                    Name = "Microsoft.BizTalk.GlobalPropertySchemas"
+                    AssemblyName = "Microsoft.BizTalk.GlobalPropertySchemas"
+                    HintPath = "..\..\..\Development\Microsoft BizTalk Server 2006\Microsoft.BizTalk.GlobalPropertySchemas.dll"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "WEBooksAndDistribuidor.xsd"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk"
+                    Type = "WEBooksAndDistribuidor"
+                />
+                <File
+                    RelPath = "WEBooksAndDistribuidorProperty.xsd"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk"
+                    Type = "WEBooksAndDistribuidorProperty"
+                />
+                <File
+                    RelPath = "WEBooksBiztalkSchema.xsd"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk"
+                    Type = "WEBooksBiztalkSchema"
+                />
+                <File
+                    RelPath = "Maps\Book2ItemBarnes.btm"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.Maps"
+                    Type = "Book2ItemBarnes"
+                />
+                <File
+                    RelPath = "Maps\Book2Livro.btm"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.Maps"
+                    Type = "Book2Livro"
+                />
+                <File
+                    RelPath = "Maps\Book2NYT.btm"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.Maps"
+                    Type = "Book2NYT"
+                />
+                <File
+                    RelPath = "Maps\Encomenda2EncomendaDist.btm"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.Maps"
+                    Type = "Encomenda2EncomendaDist"
+                />
+                <File
+                    RelPath = "Maps\EncomendaBD2EncomendaDist.btm"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.Maps"
+                    Type = "EncomendaBD2EncomendaDist"
+                />
+                <File
+                    RelPath = "Maps\ItemAmazon2Book.btm"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.Maps"
+                    Type = "ItemAmazon2Book"
+                />
+                <File
+                    RelPath = "Maps\ItemBarnes2Book.btm"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.Maps"
+                    Type = "ItemBarnes2Book"
+                />
+                <File
+                    RelPath = "Maps\JuntaBook.btm"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.Maps"
+                    Type = "JuntaBook"
+                />
+                <File
+                    RelPath = "Maps\Livro2Book.btm"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.Maps"
+                    Type = "Livro2Book"
+                />
+                <File
+                    RelPath = "Maps\Promocao2Livro.btm"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.Maps"
+                    Type = "Promocao2Livro"
+                />
+                <File
+                    RelPath = "Maps\TransformaCliente.btm"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.Maps"
+                    Type = "TransformaCliente"
+                />
+                <File
+                    RelPath = "Maps\TransformaClientes.btm"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.Maps"
+                    Type = "TransformaClientes"
+                />
+                <File
+                    RelPath = "Maps\TransformaEncomendas.btm"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.Maps"
+                    Type = "TransformaEncomendas"
+                />
+                <File
+                    RelPath = "Maps\TransformaGeoLocalizacao.btm"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.Maps"
+                    Type = "TransformaGeoLocalizacao"
+                />
+                <File
+                    RelPath = "Maps\TransformaUtilizador.btm"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.Maps"
+                    Type = "TransformaUtilizador"
+                />
+                <File
+                    RelPath = "Orchestration\HistoricoComprasEncomenda.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Orchestration\HistoricoComprasLivros.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Orchestration\InsereLivroCarrinhoCompras.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Orchestration\ListaCarrinhoCompras.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Orchestration\ListaPesquisaHistorico.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Orchestration\LoginUtilizador.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Orchestration\MostraDadosCliente.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Orchestration\MostraEncomendasCliente.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Orchestration\MostraEncomendasLivro.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Orchestration\MostraLivrosMaisComprados.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Orchestration\MostraLivrosMaisPesquisados.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Orchestration\PesquisaLivros.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Orchestration\RealizaEncomenda.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Orchestration\RegistaCliente.odx"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\WEBooksAmazon\Reference.map"
+                    BuildAction = "None"
+                    Namespace = "WEBooksBiztalk.WEBooksAmazon"
+                    Generator = "MSDiscoCodeGenerator"
+                />
+                <File
+                    RelPath = "Web References\WEBooksAmazon\Reference.odx"
+                    DependentUpon = "Reference.map"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\WEBooksAmazon\Reference.xsd"
+                    DependentUpon = "Reference.map"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.WEBooksAmazon"
+                    Type = "Reference"
+                />
+                <File
+                    RelPath = "Web References\WEBooksAmazon\WEBooksAmazon.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WEBooksAmazon\WEBooksAmazon.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\WEBooksAmazon\"
+                    WebReferenceUrl = "http://sp/WEBooksAmazon/WEBooksAmazon.asmx"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\WEBooksBarnesNoble\Reference.map"
+                    BuildAction = "None"
+                    Namespace = "WEBooksBiztalk.WEBooksBarnesNoble"
+                    Generator = "MSDiscoCodeGenerator"
+                />
+                <File
+                    RelPath = "Web References\WEBooksBarnesNoble\Reference.odx"
+                    DependentUpon = "Reference.map"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\WEBooksBarnesNoble\Reference.xsd"
+                    DependentUpon = "Reference.map"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.WEBooksBarnesNoble"
+                    Type = "Reference"
+                />
+                <File
+                    RelPath = "Web References\WEBooksBarnesNoble\WEBooksBarnesNoble.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WEBooksBarnesNoble\WEBooksBarnesNoble.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\WEBooksBarnesNoble\"
+                    WebReferenceUrl = "http://sp/WEBooksBarnesNoble/WEBooksBarnesNoble.asmx"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\WEBooksBD\Reference.map"
+                    BuildAction = "None"
+                    Namespace = "WEBooksBiztalk.WEBooksBD"
+                    Generator = "MSDiscoCodeGenerator"
+                />
+                <File
+                    RelPath = "Web References\WEBooksBD\Reference.odx"
+                    DependentUpon = "Reference.map"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\WEBooksBD\Reference.xsd"
+                    DependentUpon = "Reference.map"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.WEBooksBD"
+                    Type = "Reference"
+                />
+                <File
+                    RelPath = "Web References\WEBooksBD\WEBooksBDService.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WEBooksBD\WEBooksBDService.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\WEBooksBD\"
+                    WebReferenceUrl = "http://caseiro/WEBooksBD/WEBooksBDService.asmx"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\WEBooksGeoCode\Reference.map"
+                    BuildAction = "None"
+                    Namespace = "WEBooksBiztalk.WEBooksGeoCode"
+                    Generator = "MSDiscoCodeGenerator"
+                />
+                <File
+                    RelPath = "Web References\WEBooksGeoCode\Reference.odx"
+                    DependentUpon = "Reference.map"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\WEBooksGeoCode\Reference.xsd"
+                    DependentUpon = "Reference.map"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.WEBooksGeoCode"
+                    Type = "Reference"
+                />
+                <File
+                    RelPath = "Web References\WEBooksGeoCode\WEBooksGeoCoder.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WEBooksGeoCode\WEBooksGeoCoder.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\WEBooksGeoCode\"
+                    WebReferenceUrl = "http://sp/WEBooksGeoCoder/WEBooksGeoCoder.asmx"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\WEBooksNYT\Reference.map"
+                    BuildAction = "None"
+                    Namespace = "WEBooksBiztalk.WEBooksNYT"
+                    Generator = "MSDiscoCodeGenerator"
+                />
+                <File
+                    RelPath = "Web References\WEBooksNYT\Reference.odx"
+                    DependentUpon = "Reference.map"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\WEBooksNYT\Reference.xsd"
+                    DependentUpon = "Reference.map"
+                    BuildAction = "Compile"
+                    Namespace = "WEBooksBiztalk.WEBooksNYT"
+                    Type = "Reference"
+                />
+                <File
+                    RelPath = "Web References\WEBooksNYT\WEBooksNY.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WEBooksNYT\WEBooksNY.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\WEBooksNYT\"
+                    WebReferenceUrl = "http://sp/WEBooksNYT/WEBooksNY.asmx"
+                    UrlBehavior = "Static"
+                />
+                <Folder
+                    RelPath = "Web References\"
+                    WebReferences = "TRUE"
+                />
+            </Include>
+        </Files>
+    </BIZTALK>
+</VisualStudioProject>
+

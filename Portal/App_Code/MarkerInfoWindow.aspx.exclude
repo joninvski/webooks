@@ -1,0 +1,26 @@
+﻿<%@ Page language="c#" AutoEventWireup="true" Inherits="TestWeb.MarkerInfoWindow" CodeFile="MarkerInfoWindow.aspx.cs" %>
+<%@ Register TagPrefix="wcp" Namespace="WCPierce.Web.UI.WebControls" Assembly="WCPierce.Web" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Mostra Localizacao dos Clientes</title>
+    <style type="text/css">
+      v\:* {
+        behavior:url(#default#VML);
+      }
+    </style>
+    <script type="text/javascript">
+      function GMarker_Click()
+      {
+        var html = "<b>" + this.id + "</b>";
+        this.openInfoWindowHtml(html);
+      }
+    </script>
+  </head>
+  <body>
+    <form id="Form1" method="post" runat="server">
+      <wcp:GMap runat="server" id="gMap" Width="1000px" Height="600px" />
+    </form>
+  </body>
+</html>

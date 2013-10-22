@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://sp/WEBooksNYT/WEBooksNY.asmx?wsdl" docRef="http://sp/WEBooksNYT/WEBooksNY.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://sp/WEBooksNYT/WEBooksNY.asmx" xmlns:q1="http://WEBooksNY.pt/" binding="q1:WEBooksNYSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://sp/WEBooksNYT/WEBooksNY.asmx" xmlns:q2="http://WEBooksNY.pt/" binding="q2:WEBooksNYSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

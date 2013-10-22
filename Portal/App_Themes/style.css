@@ -1,0 +1,177 @@
+#layoutTable
+{
+	width: 95%;
+	height: 550px;
+	border-spacing: 0px;
+}
+
+#imageLayout2
+{
+	left: 50%;
+	right: 50%;
+	
+}
+
+#header
+{
+	width: 60%;
+	height: 20%;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #B5C7DE;
+}
+
+#body
+{
+	height: 70%;
+	text-align: center;
+	vertical-align: middle;
+	background-color: White;
+}
+
+#menu
+{
+	width: 158px;
+	vertical-align: top;
+	background: #B5C7DE;
+}
+
+#login
+{
+	width: 30%;
+	height: 20%;
+	text-align: right;
+	vertical-align: middle;
+	background: #B5C7DE;
+}
+
+#footer
+{
+	height: 50px;
+	background: #B5C7DE;
+}
+
+#left
+{
+	width: 200px;
+	background: #B5C7DE;
+}
+
+a{/*qd nunca foi seleccionado - defeito*/
+	font-weight: bold;
+	color: #9CB5D3;
+	font-size: 14px;
+}
+
+a:active {
+	font-weight: bold; 
+	color: red;
+	font-size: 14px;
+}
+
+
+
+a:visited {/*qd ja foi visitado o link*/
+
+	font-weight: bold; 
+
+	color: #4C77AA;
+
+	font-size: 14px;
+
+}
+
+
+
+a:hover {/*qd estamos com o rato por cima*/
+
+	COLOR: #000000;
+
+	font-size: 14px;
+
+}
+
+
+
+
+
+/* para alterar o campo h2*/
+
+h2{
+
+	margin-top: 5px;
+
+	margin-bottom: 5px;
+
+	font-weight: bold; 
+
+	font-size: 15px;
+
+}
+
+
+
+h6{
+
+	margin-top: 0px;
+
+	margin-bottom: 0px;
+
+	color: yellow;
+
+	text-align: center;
+
+	vertical-align: middle;
+
+	font-weight: bold; 
+
+	font-size: 15px; 
+
+}
+
+
+
+/* Para alterar os botoes e area de texto */
+
+input, select, textarea{
+
+	font-size: 12px;
+
+	font-weight: normal;
+
+	border: 1px solid #161616; 
+
+	padding: 2px;
+
+	margin: 0px;
+
+	font-family: helvetia, tahoma, arial, verdana;
+
+}
+
+
+
+img{
+
+	border:  none;
+
+}
+
+/*
+
+form {
+
+	padding-top: 10px;
+
+	padding-bottom: 0px;
+
+	padding-left: 2px;
+
+	padding-right: 2px;
+
+}*/
+
+
+
+
+

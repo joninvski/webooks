@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:tns="http://webooks.org/" elementFormDefault="qualified" targetNamespace="http://webooks.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ArrayOfItem" nillable="true" type="tns:ArrayOfItem" />
+  <xs:complexType name="ArrayOfItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Item" nillable="true" type="tns:Item" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Item">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Titulo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Isbn" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Autor" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ImageUrl" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Editora" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Categoria" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Preco" type="xs:double" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Ano" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Disponibilidade" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Fornecedor" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TipoCapa" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Item" nillable="true" type="tns:Item" />
+</xs:schema>

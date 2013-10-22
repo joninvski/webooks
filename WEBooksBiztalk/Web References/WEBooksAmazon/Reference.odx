@@ -1,0 +1,100 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="11a03080-0d30-458b-89ec-535b77ddb9d4" LowerBound="1.1" HigherBound="28.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="WEBooksBiztalk.WEBooksAmazon.WEBooksAmazonWS_" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="MethodMessageType" OID="00000000-0000-0000-0000-000000000000" ParentLink="Module_MessageType">
+            <om:Property Name="Url" Value="http://sp/WEBooksAmazon/WEBooksAmazon.asmx" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="WEBooksBiztalk.WEBooksAmazon.WEBooksAmazonWS" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MethodMessageOperation" OID="65f3b4df-749c-4fe4-924d-707aeac8bcfb" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="ProcuraItem" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ProcuraItem_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="b72ce039-b695-4b30-97cf-6e5cb920f78a" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="page" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="52bb9896-7814-4007-8b32-b905707b0d63" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="keyword" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="c4697661-4a71-45e2-bc5f-f47e20259281" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="author" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="bd40ad14-e01f-4187-8ead-2e3fbce5ad2e" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="title" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="WebOperationPart" OID="de58286b-0152-462b-93db-1ab473249bdb" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="isbn" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="e3838dce-fdbf-4d69-a640-b3d1f8636287" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="ProcuraItem" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ProcuraItem_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="b74cfe66-f1eb-4054-953f-ace62d495f0e" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksAmazon.Reference.ArrayOfItem" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ProcuraItemResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="TargetXMLNamespaceAttribute" OID="ce292d09-2fb0-4250-85fb-27d748b2fe92" ParentLink="Module_CLRAttribute" LowerBound="2.1" HigherBound="3.1">
+            <om:Property Name="TargetXMLNamespace" Value="http://webooks.org/" />
+            <om:Property Name="Signal" Value="False" />
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(true)]
+[Microsoft.XLANGs.BaseTypes.TargetXmlNamespaceAttribute("http://webooks.org/")]
+module WEBooksBiztalk.WEBooksAmazon.WEBooksAmazonWS_
+{
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksAmazon.WEBooksAmazonWS), "ProcuraItem", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype ProcuraItem_request
+    {
+        body System.String page;
+        System.String keyword;
+        System.String author;
+        System.String title;
+        System.String isbn;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksAmazon.WEBooksAmazonWS), "ProcuraItem", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype ProcuraItem_response
+    {
+        body WEBooksBiztalk.WEBooksAmazon.Reference.ArrayOfItem ProcuraItemResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WSDLProxyName(typeof(WEBooksBiztalk.WEBooksAmazon.WEBooksAmazonWS))]
+    public porttype WEBooksAmazonWS
+    {
+        requestresponse ProcuraItem
+        {
+            WEBooksBiztalk.WEBooksAmazon.WEBooksAmazonWS_.ProcuraItem_request, WEBooksBiztalk.WEBooksAmazon.WEBooksAmazonWS_.ProcuraItem_response
+        };
+    };
+}
+

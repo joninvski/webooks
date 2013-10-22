@@ -1,0 +1,178 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="5f9e926f-28e3-4dc4-a090-cb6ae73a57d0" LowerBound="1.1" HigherBound="64.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="WEBooksBiztalk.WEBooksNYT.WEBooksNY_" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="MethodMessageType" OID="00000000-0000-0000-0000-000000000000" ParentLink="Module_MessageType">
+            <om:Property Name="Url" Value="http://sp/WEBooksNYT/WEBooksNY.asmx" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="WEBooksBiztalk.WEBooksNYT.WEBooksNY" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MethodMessageOperation" OID="40550295-4962-404b-9710-53d8bc67605b" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="LivrosTopSellers" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="LivrosTopSellers_request" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="2ddcce37-a09b-4685-b2ac-0468e6e756b1" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="LivrosTopSellers" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="LivrosTopSellers_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="c35fba20-5c48-4f97-9827-f8c3ed969661" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksNYT.Reference.ArrayOfLivroPromocao" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="LivrosTopSellersResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="28d65112-fc57-4a1d-aced-5922983c094e" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="AssinalaLivrosDesconto" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AssinalaLivrosDesconto_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="d5ac4335-f3b8-4fff-b3c7-ef82ee17d802" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksNYT.Reference.ArrayOfDesconto" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="listaLivros" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="b32aad26-6dd1-4725-b9ab-9bc3f29cf9e3" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="AssinalaLivrosDesconto" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AssinalaLivrosDesconto_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="da5441eb-8b70-489b-aeb2-058e962c9ee1" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksNYT.Reference.ArrayOfDesconto" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="AssinalaLivrosDescontoResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="201f42ff-a3d0-47f1-89ef-fb199f1b8808" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="devolveTipoCapa" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="devolveTipoCapa_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="397bfc83-863a-4559-80b4-e0c5486bd9fc" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="tipoCapa" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="828a0e61-800a-4a08-b16b-15a3339d4078" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="devolveTipoCapa" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="devolveTipoCapa_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="087f104d-0709-4dc1-81b1-bcc8e4c5f428" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="System.String" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="devolveTipoCapaResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="abdbca7c-ff3f-4401-bb05-6a414d767605" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="testaAssinala" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="testaAssinala_request" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="20f5a65e-ffed-4499-8b56-d18a240b71df" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="testaAssinala" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="testaAssinala_response" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="74906b5d-7652-4593-ae55-c3304fee5761" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="WEBooksBiztalk.WEBooksNYT.Reference.ArrayOfDesconto" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="testaAssinalaResult" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="TargetXMLNamespaceAttribute" OID="e9da7ae0-4d84-4f88-a162-dffbc074a901" ParentLink="Module_CLRAttribute" LowerBound="2.1" HigherBound="3.1">
+            <om:Property Name="TargetXMLNamespace" Value="http://WEBooksNY.pt/" />
+            <om:Property Name="Signal" Value="False" />
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(true)]
+[Microsoft.XLANGs.BaseTypes.TargetXmlNamespaceAttribute("http://WEBooksNY.pt/")]
+module WEBooksBiztalk.WEBooksNYT.WEBooksNY_
+{
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksNYT.WEBooksNY), "LivrosTopSellers", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype LivrosTopSellers_request
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksNYT.WEBooksNY), "LivrosTopSellers", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype LivrosTopSellers_response
+    {
+        body WEBooksBiztalk.WEBooksNYT.Reference.ArrayOfLivroPromocao LivrosTopSellersResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksNYT.WEBooksNY), "AssinalaLivrosDesconto", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype AssinalaLivrosDesconto_request
+    {
+        body WEBooksBiztalk.WEBooksNYT.Reference.ArrayOfDesconto listaLivros;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksNYT.WEBooksNY), "AssinalaLivrosDesconto", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype AssinalaLivrosDesconto_response
+    {
+        body WEBooksBiztalk.WEBooksNYT.Reference.ArrayOfDesconto AssinalaLivrosDescontoResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksNYT.WEBooksNY), "devolveTipoCapa", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype devolveTipoCapa_request
+    {
+        body System.String tipoCapa;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksNYT.WEBooksNY), "devolveTipoCapa", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype devolveTipoCapa_response
+    {
+        body System.String devolveTipoCapaResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksNYT.WEBooksNY), "testaAssinala", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype testaAssinala_request
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(WEBooksBiztalk.WEBooksNYT.WEBooksNY), "testaAssinala", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype testaAssinala_response
+    {
+        body WEBooksBiztalk.WEBooksNYT.Reference.ArrayOfDesconto testaAssinalaResult;
+    };
+    [Microsoft.XLANGs.BaseTypes.WSDLProxyName(typeof(WEBooksBiztalk.WEBooksNYT.WEBooksNY))]
+    public porttype WEBooksNY
+    {
+        requestresponse testaAssinala
+        {
+            WEBooksBiztalk.WEBooksNYT.WEBooksNY_.testaAssinala_request, WEBooksBiztalk.WEBooksNYT.WEBooksNY_.testaAssinala_response
+        };
+        requestresponse AssinalaLivrosDesconto
+        {
+            WEBooksBiztalk.WEBooksNYT.WEBooksNY_.AssinalaLivrosDesconto_request, WEBooksBiztalk.WEBooksNYT.WEBooksNY_.AssinalaLivrosDesconto_response
+        };
+        requestresponse devolveTipoCapa
+        {
+            WEBooksBiztalk.WEBooksNYT.WEBooksNY_.devolveTipoCapa_request, WEBooksBiztalk.WEBooksNYT.WEBooksNY_.devolveTipoCapa_response
+        };
+        requestresponse LivrosTopSellers
+        {
+            WEBooksBiztalk.WEBooksNYT.WEBooksNY_.LivrosTopSellers_request, WEBooksBiztalk.WEBooksNYT.WEBooksNY_.LivrosTopSellers_response
+        };
+    };
+}
+

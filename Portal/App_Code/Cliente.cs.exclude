@@ -1,0 +1,73 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+
+/// <summary>
+/// Summary description for Class1
+/// </summary>
+public class Cliente
+{
+    private string _name;
+    private string _password;
+    private string _login;
+    private Carrinho _carrinho;
+
+	public Cliente(string login, string pass, string name)
+	{
+        _carrinho = new Carrinho(this.Login);
+        _name = name;
+        _login = login;
+	}
+
+    public string Username {
+        get {
+            return _name;
+        }
+        set {
+            _name = value;
+        }
+    }
+
+    public string Login
+    {
+        get
+        {
+            return _login;
+        }
+        set
+        {
+            _login = value;
+        }
+    }
+
+    public string Password
+    {
+        get
+        {
+            return _password;
+        }
+        set
+        {
+            _password = value;
+        }
+    }
+
+    public Carrinho Carrinho
+    {
+        get
+        {
+            return _carrinho;
+        }
+        set
+        {
+            _carrinho = value;
+        }
+    }
+
+}

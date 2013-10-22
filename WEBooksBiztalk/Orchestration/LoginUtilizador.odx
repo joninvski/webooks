@@ -1,0 +1,357 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="755ecc75-c1cc-441d-8f02-b8e96355c1b2" LowerBound="1.1" HigherBound="75.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="WEBooksBiztalk" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="ServiceDeclaration" OID="31975cf4-2f7d-46ee-a23a-02b85f577d90" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="74.1">
+            <om:Property Name="InitializedTransactionType" Value="True" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="LoginUtilizador" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="LongRunningTransaction" OID="e2223ba7-fe65-48fe-baa3-b52725ae0548" ParentLink="ServiceDeclaration_Transaction" LowerBound="12.21" HigherBound="12.61">
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="OrchTransacao" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="a7f99669-9016-4004-a9cc-3f7a307b4f40" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="Type" Value="WEBooksBiztalk.WEBooksBD.WEBooksBDService_.LoginUtilizador_request" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Pedido" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="a1b49dd2-5677-4874-9833-434b195455ae" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="19.1" HigherBound="20.1">
+                <om:Property Name="Type" Value="WEBooksBiztalk.WEBooksBD.WEBooksBDService_.LoginUtilizador_response" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RespostaBD" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="43d0521d-a28e-4737-a31a-ab3df3cc6740" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="20.1" HigherBound="21.1">
+                <om:Property Name="Type" Value="WEBooksBiztalk.Utilizador_response" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Resposta" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="33ede075-a4a7-492f-9d39-e40f0baa4a9c" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="21.1" HigherBound="22.1">
+                <om:Property Name="Type" Value="WEBooksBiztalk.Exception" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ExceptionBiztalk" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="163e6087-851e-4b8c-a987-ecd8756e3aaf" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="22.1" HigherBound="23.1">
+                <om:Property Name="Type" Value="WEBooksBiztalk.WEBooksBD.WEBooksBDService_.LoginUtilizador_request" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PedidoBD" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="6e64b36b-2ac9-474a-86ae-0e7e341b91eb" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="455683ee-82a3-445c-8bf8-8d3c9121ad2c" ParentLink="ServiceBody_Statement" LowerBound="25.1" HigherBound="27.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="WSLoginUtilizador" />
+                    <om:Property Name="MessageName" Value="Pedido" />
+                    <om:Property Name="OperationName" Value="LoginUtilizador" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="RecebePedido" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="ad4dfd52-9dfa-4379-83f3-0d19a24820b7" ParentLink="ServiceBody_Statement" LowerBound="27.1" HigherBound="34.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="CriaPedidoBD" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="60366cdd-e509-4760-825f-f698c9ed405d" ParentLink="Construct_MessageRef" LowerBound="28.23" HigherBound="28.31">
+                        <om:Property Name="Ref" Value="PedidoBD" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="7aa4931f-6261-4030-bab6-62e5cf6b79e8" ParentLink="ComplexStatement_Statement" LowerBound="30.1" HigherBound="33.1">
+                        <om:Property Name="Expression" Value="PedidoBD.username = Pedido.username;&#xD;&#xA;PedidoBD.password = Pedido.password;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="NewPedidoBD" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Scope" OID="5fdac4ae-f6c3-476e-bf98-ec3017de0792" ParentLink="ServiceBody_Statement" LowerBound="34.1" HigherBound="72.1">
+                    <om:Property Name="InitializedTransactionType" Value="True" />
+                    <om:Property Name="IsSynchronized" Value="False" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ScopeLoginUtilizador" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="LongRunningTransaction" OID="6fc058bc-13fb-4f73-8ed5-c43aa676bb8a" ParentLink="Scope_Transaction" LowerBound="35.18" HigherBound="35.59">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="ScopeTransaction" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="Task" OID="e0aef1fb-1107-442e-992b-30b1474ff34c" ParentLink="ComplexStatement_Statement" LowerBound="39.1" HigherBound="51.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="FalaBD" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Send" OID="120aacac-1c9b-4622-9520-b74927d8be51" ParentLink="ComplexStatement_Statement" LowerBound="39.1" HigherBound="41.1">
+                            <om:Property Name="PortName" Value="WSBDLoginUtilizador" />
+                            <om:Property Name="MessageName" Value="PedidoBD" />
+                            <om:Property Name="OperationName" Value="LoginUtilizador" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="FazPedidoBD" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Receive" OID="76fff722-55ed-4262-954d-589e53cce809" ParentLink="ComplexStatement_Statement" LowerBound="41.1" HigherBound="43.1">
+                            <om:Property Name="Activate" Value="False" />
+                            <om:Property Name="PortName" Value="WSBDLoginUtilizador" />
+                            <om:Property Name="MessageName" Value="RespostaBD" />
+                            <om:Property Name="OperationName" Value="LoginUtilizador" />
+                            <om:Property Name="OperationMessageName" Value="Response" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="RecebeRespostaBD" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Construct" OID="bb5a5e96-1a35-4d21-97ad-35199fa29309" ParentLink="ComplexStatement_Statement" LowerBound="43.1" HigherBound="49.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="CriaResposta" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Transform" OID="223efb40-bcc0-476c-b1e2-c0a241b6d281" ParentLink="ComplexStatement_Statement" LowerBound="46.1" HigherBound="48.1">
+                                <om:Property Name="ClassName" Value="WEBooksBiztalk.Maps.TransformaUtilizador" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="TransformaUtilizador" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessagePartRef" OID="0ce0f1a7-2615-4c33-89ea-93eb05789d29" ParentLink="Transform_InputMessagePartRef" LowerBound="47.101" HigherBound="47.133">
+                                    <om:Property Name="MessageRef" Value="RespostaBD" />
+                                    <om:Property Name="PartRef" Value="LoginUtilizadorResult" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_1" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="632c92ff-7774-46d6-9278-13b82897d80d" ParentLink="Transform_OutputMessagePartRef" LowerBound="47.36" HigherBound="47.55">
+                                    <om:Property Name="MessageRef" Value="Resposta" />
+                                    <om:Property Name="PartRef" Value="utilizador" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_2" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="d829da3f-e683-4275-be0b-d16f90bedc1e" ParentLink="Construct_MessageRef" LowerBound="44.31" HigherBound="44.39">
+                                <om:Property Name="Ref" Value="Resposta" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Send" OID="0fbf9190-4060-4e50-b014-27b325655237" ParentLink="ComplexStatement_Statement" LowerBound="49.1" HigherBound="51.1">
+                            <om:Property Name="PortName" Value="WSLoginUtilizador" />
+                            <om:Property Name="MessageName" Value="Resposta" />
+                            <om:Property Name="OperationName" Value="LoginUtilizador" />
+                            <om:Property Name="OperationMessageName" Value="Response" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="EnviaResposta" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Catch" OID="ddacabfc-3ca4-4c69-8b09-3bfa65f39206" ParentLink="Scope_Catch" LowerBound="54.1" HigherBound="70.1">
+                        <om:Property Name="ExceptionName" Value="ex" />
+                        <om:Property Name="ExceptionType" Value="System.Web.Services.Protocols.SoapException" />
+                        <om:Property Name="IsFaultMessage" Value="False" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="CatchSOAPException" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Construct" OID="85f33b70-7502-41aa-ad8c-ad15fa21cdb8" ParentLink="Catch_Statement" LowerBound="57.1" HigherBound="63.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="CriaExcepcao" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageRef" OID="614062e1-45f7-4b4c-85ed-cdb27f244f28" ParentLink="Construct_MessageRef" LowerBound="58.35" HigherBound="58.51">
+                                <om:Property Name="Ref" Value="ExceptionBiztalk" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="MessageAssignment" OID="7c27c88f-ec04-4a83-b328-e66f344e86d1" ParentLink="ComplexStatement_Statement" LowerBound="60.1" HigherBound="62.1">
+                                <om:Property Name="Expression" Value="ExceptionBiztalk.excepcao = ex.Message;" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="CriaExcepcaoBiztalk" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Decision" OID="29cb9eef-ef91-408b-a7df-63cf6acad60f" ParentLink="Catch_Statement" LowerBound="63.1" HigherBound="69.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="SeFalhouTransacao" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="DecisionBranch" OID="bf6b820f-10f9-4225-a31a-800c6201b5b8" ParentLink="ReallyComplexStatement_Branch" LowerBound="64.25" HigherBound="69.1">
+                                <om:Property Name="Expression" Value="! succeeded (ScopeTransaction)" />
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="EnviaExcepcao" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="Send" OID="f67f53d8-992e-41c2-9ebc-c77a4a9ba1ce" ParentLink="ComplexStatement_Statement" LowerBound="66.1" HigherBound="68.1">
+                                    <om:Property Name="PortName" Value="WSLoginUtilizador" />
+                                    <om:Property Name="MessageName" Value="ExceptionBiztalk" />
+                                    <om:Property Name="OperationName" Value="LoginUtilizador" />
+                                    <om:Property Name="OperationMessageName" Value="Fault" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="EnviaExcepcao" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="DecisionBranch" OID="35e594f9-54b5-44da-aec5-30ed424bc202" ParentLink="ReallyComplexStatement_Branch">
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Else" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="1deb438c-8fe9-451e-b589-ab2e2a60e2c0" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="0" />
+                <om:Property Name="IsWebPort" Value="True" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="WEBooksBiztalk.WEBooksBD.WEBooksBDService_.WEBooksBDService" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="WSBDLoginUtilizador" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="PhysicalBindingAttribute" OID="d78d2c8b-c48e-4e94-850d-a898d60688c1" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="InPipeline" Value="Microsoft.BizTalk.DefaultPipelines.PassThruReceive" />
+                    <om:Property Name="OutPipeline" Value="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" />
+                    <om:Property Name="TransportType" Value="SOAP" />
+                    <om:Property Name="URI" Value="http://caseiro/WEBooksBD/WEBooksBDService.asmx" />
+                    <om:Property Name="IsDynamic" Value="False" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="1bb7eb74-60e2-44c9-ab76-9d2d527dd1dd" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="16.1" HigherBound="18.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="0" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="WEBooksBiztalk.PortoLoginUtilizador" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="WSLoginUtilizador" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="fcd0823b-9387-40d3-9c49-90da2c896c45" ParentLink="PortDeclaration_CLRAttribute" LowerBound="16.1" HigherBound="17.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="5ba3ef53-f1fd-4540-95a2-8baa699a17a3" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortoLoginUtilizador" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="accf97b3-3d0e-49f1-9779-d64119c636d0" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="LoginUtilizador" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="bb004214-3191-4ee8-9050-a607096af071" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.64">
+                    <om:Property Name="Ref" Value="WEBooksBiztalk.WEBooksBD.WEBooksBDService_.LoginUtilizador_request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="4e0733a4-849f-462c-98c5-2b076f857f38" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="8.66" HigherBound="8.85">
+                    <om:Property Name="Ref" Value="WEBooksBiztalk.Utilizador_response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="e21fd38c-f747-4a46-be35-71c6fc025a62" ParentLink="OperationDeclaration_FaultMessageRef" LowerBound="8.87" HigherBound="8.104">
+                    <om:Property Name="Ref" Value="WEBooksBiztalk.Exception" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Fault" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module WEBooksBiztalk
+{
+    public porttype PortoLoginUtilizador
+    {
+        requestresponse LoginUtilizador
+        {
+            WEBooksBD.WEBooksBDService_.LoginUtilizador_request, Utilizador_response, Fault = Exception
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service longrunning transaction LoginUtilizador
+    {
+        [Microsoft.XLANGs.BaseTypes.PhysicalBinding("SOAP", "http://caseiro/WEBooksBD/WEBooksBDService.asmx", typeof(Microsoft.BizTalk.DefaultPipelines.PassThruReceive), typeof(Microsoft.BizTalk.DefaultPipelines.PassThruTransmit), Proxy=typeof(WEBooksBiztalk.WEBooksBD.WEBooksBDService_.WEBooksBDService))]
+        port uses WEBooksBD.WEBooksBDService_.WEBooksBDService WSBDLoginUtilizador;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements PortoLoginUtilizador WSLoginUtilizador;
+        message WEBooksBD.WEBooksBDService_.LoginUtilizador_request Pedido;
+        message WEBooksBD.WEBooksBDService_.LoginUtilizador_response RespostaBD;
+        message Utilizador_response Resposta;
+        message Exception ExceptionBiztalk;
+        message WEBooksBD.WEBooksBDService_.LoginUtilizador_request PedidoBD;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("455683ee-82a3-445c-8bf8-8d3c9121ad2c")]
+            activate receive (WSLoginUtilizador.LoginUtilizador, Pedido);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("ad4dfd52-9dfa-4379-83f3-0d19a24820b7")]
+            construct PedidoBD
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("7aa4931f-6261-4030-bab6-62e5cf6b79e8")]
+                PedidoBD.username = Pedido.username;
+                PedidoBD.password = Pedido.password;
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("5fdac4ae-f6c3-476e-bf98-ec3017de0792")]
+            scope longrunning transaction ScopeTransaction
+            {
+                body
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("120aacac-1c9b-4622-9520-b74927d8be51")]
+                    send (WSBDLoginUtilizador.LoginUtilizador, PedidoBD);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("76fff722-55ed-4262-954d-589e53cce809")]
+                    receive (WSBDLoginUtilizador.LoginUtilizador, RespostaBD);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("bb5a5e96-1a35-4d21-97ad-35199fa29309")]
+                    construct Resposta
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("223efb40-bcc0-476c-b1e2-c0a241b6d281")]
+                        transform (Resposta.utilizador) = WEBooksBiztalk.Maps.TransformaUtilizador (RespostaBD.LoginUtilizadorResult);
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("0fbf9190-4060-4e50-b014-27b325655237")]
+                    send (WSLoginUtilizador.LoginUtilizador, Resposta);
+                }
+                exceptions
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("ddacabfc-3ca4-4c69-8b09-3bfa65f39206")]
+                    catch (System.Web.Services.Protocols.SoapException ex)
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("85f33b70-7502-41aa-ad8c-ad15fa21cdb8")]
+                        construct ExceptionBiztalk
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("7c27c88f-ec04-4a83-b328-e66f344e86d1")]
+                            ExceptionBiztalk.excepcao = ex.Message;
+                        }
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("29cb9eef-ef91-408b-a7df-63cf6acad60f")]
+                        if (! succeeded (ScopeTransaction))
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("f67f53d8-992e-41c2-9ebc-c77a4a9ba1ce")]
+                            send (WSLoginUtilizador.LoginUtilizador.Fault, ExceptionBiztalk);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
